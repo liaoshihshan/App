@@ -1,0 +1,2156 @@
+﻿網站設計 ： 
+CSS樣式 ： http：//templated.co/
+電子書 ： http：//www.w3schools.com/
+圖表 ： http：//www.highcharts.com/demo
+圖示 ： http：//www.pixeden.com/
+Username ： john
+Password ： student
+顏色 ： http://www.flatuicolorpicker.com
+偵錯(快捷鍵:F12) ： 用chrome開啓找工具 -> javascript控制台(尋找[快捷鍵]:Ctrl+Shift+C[inspect])，在CSS中打勾與取消打勾可以看情況，直接把程式碼貼到CSS中看結果。
+html ： 製作網頁內容(</> ： 結束)
+html5的doctype ： <!DOCTYPE html>
+支援繁體中文 ： <html lang = "zh-tw"> 
+             <meta charset = "UTF-8"/>
+開頭 ： <head></head>
+標題 ： <title></title>
+標題大小 ： <h1>(最大字) ~ <h6>(最小字)
+水平線 ： <hr/>
+文字 ： <div>(可以把文檔分割为獨立的、不同的部分)、<span>(文字連著)、<p>(每隔一個段落空一行)。
+換行 ： <br>
+
+下拉式選單 ： 
+<select>
+  <option value="1">高中</option> 
+  <option value="2">大學</option>
+</select>
+
+清單(預設清單編號 ： 1、2、3、…) ： 
+<ul>                   <ol>
+  <li>項目一<li>           <li>項目一<li>
+  <li>項目二<li>           <li>項目二<li>
+</ul>                   </ol>
+
+自行定義清單 ： 
+<dl>
+  <dt>項目一<dt>
+  <dd>說明</dd>(清單說明)
+</dl> 
+
+超連結 ： 
+<a href="網址">yahoo</a>
+<xxx/檔名.html>(連結到下一層)
+<../檔名.html>(回到上一層)
+
+圖片 ： 
+<img src="放圖片的資料夾/檔名.jpg"(圖片來源) alt="文字"(不顯示圖片以文字代替) title="文字"(滑鼠移到圖片上出現的文字)/>
+<figure>(圖片說明)
+  <figcaption>說明文字</figcaption>(圖片的說明只能放一個)
+</figure>
+
+音樂 ： 
+<audio src="檔名.mp3"/>(controls ： 產生控制面板)
+
+影片 ： 
+<video width="200" height="300">(controls ： 產生控制面板，autoplay ： 自動播放)
+ <source src="檔名.mp4"/>
+</video>
+
+表格 ： 
+<table>
+  <caption>表格標題</caption>
+  <tr>(列)
+  <th>(存放標題的儲存格)
+  <td>(行：資料)(colspan：合併左右、rowspan：合併上下)
+</table>
+
+表單 ： 
+<fieldset> ： 表單加框線(置中 ： margin：auto;)
+<legend> ： 表單名稱
+<form action="#" method="get">(action：接收的url method：傳送表單資料方式(get：未加密、post：已加密))
+<input type = "date"> ： 日期。
+<input type = "color"> ： 顏色。
+<input type = "radio"> ： 單選鈕。
+<input type = "checkbox"> ： 複選鈕。
+<input type = "password"> ： 密碼輸入。
+<input type = "textarea"> ： 多行文字輸入。
+<input type = "reset" value = "清除"> ： 清除鈕。
+<input type = "submit" value = "送出"> ： 送出鈕。
+<input type = "file"> ： 檔案上傳鈕(multiple ： 可多選)。
+<input type = "range" min="輸入最小值" max="輸入最大值" step="變化量"> ： 滑動軸(step：增量)。
+<input type = "number" min="輸入最小值" max="輸入最大值"> ： 數值(可以按上下箭頭選擇數值)。
+<input type = "text" placeholder="輸入姓名"> ： 單行文字輸入(autofocus ： 滑鼠進入預設、placeholder ： 隱藏式文字、maxlength ： 可輸入最大長度)。
+pattern="[A~Z]{1}[1~2]{1}\d{8}" ： 身分證字號檢查(在[]中取{}裡面的個數，\d ： 任意數)。
+
+嵌入別的網頁(入口網站(yahoo、google)不能用) ： 
+<iframe src="http：//…"/>
+
+幾秒後連結到不同的網頁 ： 
+<meta http-equiv="refresh" content="秒數;url=網址">
+
+跑馬燈 ： 
+<marquee>文字</marquee>
+
+預留文字格式 ： <pre>文字</pre> 
+文字看成一行 ： <span>文字</span>
+
+css ： 製作網頁內容的樣式(寫在<style></style>中，用{}，有多個屬性用;隔開，*{}：所有html標籤都設定)
+直接定義在原有的html中 ： <h3 style = "css語法">
+寫在style中 ： <style>
+                h3{color = "red"} 
+               </style>
+將原本寫好的css檔加入 ： <link rel="stylesheet" href="檔名.css">
+文繞圖 ： img{float：left; margin：10px; padding：10px;}(margin：邊界，padding：填充，對齊方式：上、右、下、左)
+選擇器(套到html標籤上) ： 
+ID(只能套一個) ： #ID名{樣式1;樣式2;樣式3;…}
+                  <標籤 id = "ID名">文字</h1>
+類別 ： .類別名{樣式1;樣式2;樣式3;…}
+         <標籤 class = "類別名">文字</h1>
+超連結選擇器 ： 
+  a：link{}(未連結)、a：visited{}(連結過)、a：haver{}(滑鼠移到連結)、a：active{}(按滑鼠左鍵不放開)
+
+表格css屬性 ： 
+表格群組化 ： tbody tr或td{}
+滑鼠移到時產生變化 ： tr：hover
+偶數列 ： tr：nth-child(2n){}
+奇數列 ： tr：nth-child(2n+1){}
+
+設定邊框(寫在css中) ： 
+{border ： 1px solid(實線) red}(double：雙線、dotted：點線、dashed：虛線、outset：浮出線)
+{border-radius：20px} ： 邊框圓角
+margin ： 邊界空白距離(上、右、下、左)。
+padding ： 元素區域與邊框距離(上、右、下、左)。
+float ： 浮動(當成區塊可移到左邊或右邊)。
+overflow ： 當區塊內容大於區塊大小(auto：自動出現捲軸、scroll：強迫出現捲軸、hidden：超出區塊部分不顯示)。
+
+javascript ： (寫在<script></script>中)
+用var宣告變數沒有型態限制。
+在html標籤中宣告id可在script中用document.getElementById("id名稱").value取值
+getElementsByName ： 
+var t = getElementsByName("Name名稱");
+for(var i = 0 ; i < t.length ; i++){…}
+取標籤 ： document.getElementsByTagName("標籤名稱");
+
+載入已經寫好的javascript檔(副檔名：.js) ： 
+<script src = "檔名.js"></script>
+在javascript中使用html標籤 ： document.write("(html標籤內的""改成'')");
+
+顯示小視窗 ： 
+alert("文字") ： 顯示訊息。
+prompt("文字","預設值") ： 可以傳回使用者輸入的字串。
+comfirm("文字") ： 按確定回傳true，按取消回傳false。
+
+印出陣列元素 ： 
+for(var obj in 陣列名稱)
+  document.write(陣列名稱[obj]);
+ 
+按下按鈕 ： 
+在html中 ： <input type="button" value="click" onclick="check()">
+在javascript中 ： function check(){…}
+
+鍵盤 ： 
+onkeyup(放開按鍵) ： 抓英文大寫與功能鍵(ex ： alt鍵、ctrl鍵…)。
+onkeypress(按下按鍵) ： 抓英文大小寫但是抓不到功能鍵。
+onkeydowm(按下按鍵) ： 抓英文大寫與功能鍵(ex ： alt鍵、ctrl鍵…)。
+
+滑鼠 ： 
+onclick ： 按滑鼠左鍵。
+onmouseover ： 滑鼠移入。
+onmouseout ： 滑鼠移出。
+
+焦點(目標) ： 
+onblur ： 游標離開目標滑鼠按一下。
+onfocus ： 游標進入時。
+onchange ： 修改文字內容離開。
+
+計時器 ： 
+var 物件 ＝ setinterval(執行動作(ex："setclock();"),毫秒數) ： 每隔多少毫秒數就執行(1秒＝1000毫秒)。
+clearinterval(物件) ： 解除計時器。
+
+載入網頁就執行 ： 
+onload = function(){…};
+
+表單驗證 ： 按下送出按鈕才驗證。 
+在html裡 ： 
+  <form id="checkform"> 
+  <input type="button" onclick="check()" value="送出">
+在javascript裡 ： 
+  function check(){
+    var objform = document.checkform;
+    …
+    objform.submit();
+  }
+
+函式傳入引數 ： 要用function包在裡面。
+ex ： 
+document.getElemetById("id名稱").onclick = function(){f2("red")};
+function f2(x){alert("f2");}
+
+修改css屬性 ： 物件.style.css屬性 = css值
+動態寫入文字 ： innerHTML = "文字"
+重新執行程式 ： location.reload()
+取字串裡的字元 ： substr(開始位置,取幾個字元)
+圖像縮放 ： drawImage(物件,0,0,寬度,高度);(0：原圖大小顯示)
+畫圖 ： 
+在html ： <canvas id="myCanvas"/>
+在javascript ： var canvas = document.getElementById("myCanvas");
+                var context = canvas.getContext("2d");
+1.線條 ： 
+//開始繪圖
+context.beginPath(); 
+//設起點(moveTo(x坐標,y坐標))
+context.moveTo(100,50); 
+//線條其他的點(lineTo(x坐標,y坐標))
+context.lineTo(50,100); 
+context.lineTo(150,100);
+//線條顏色
+context.strokeStyle = "red"; 
+//線條寬度
+context.lineWidth = 10;
+ //線條端點(butt：無、round：圓點、square：矩形點) 
+context.lineCap = "";
+//填滿顏色
+context.fillStyle = "green"; 
+//填滿
+context.fill(); 
+//開始畫圖
+context.stroke(); 
+//結束繪圖
+context.closePath(); 
+2.矩形 ： 
+//矩形顏色
+context.fillStyle = "yellow"; 
+//開始畫矩形
+context.fillRect(0,60,150,50); 
+//空白矩形
+context.clearRect(30,25,90,60); 
+3.弧線 ： 
+context.arc(中心點x軸,中心點y軸,半徑,開始弧度,結束弧度,順逆時針); 
+//弧度：(0~1.5)*Math.PI，順逆時針 ： 順時針為false，逆時針為true
+//線條寬度
+context.lineWidth = 10; 
+//線條顏色
+context.strokeStyle = "red";
+//開始畫圖 
+context.stroke(); 
+//結束繪圖
+context.closePath(); 
+
+畫陰影 ： 
+//陰影x軸
+context.shadowOffsetX = 25; 
+//陰影y軸
+context.shadowOffsetY = 25;
+ //模糊度 
+context.shadowBlur = 4;
+//a ： 透明度
+context.shadowColor = "rgba(0,0,0,0.3)"; 
+
+DOM ： 處理html與xml的應用程式介面(API)。
+新增標籤 ： var h = document.createElement("標籤");
+新增文字 ： var t = document.createTextNode("文字");
+連結起來(建立節點) ：  h.appendChild(t);
+設定屬性 ： h.setAttribute("屬性","值");
+
+拖放 ： 
+css屬性 ： draggable = "true"表示可拖曳。
+例子 ： 
+function dragStartHandler(e){
+   e.dataTransfer.setData("text/plain",e.target.id);
+}
+//取消預設行為，例如圖片在拖拉時可能另開啟頁面顯示，此時就可以利用preventDefault來取消這類的預設行為
+function dropHandler(e){
+   e.preventDefault(); 
+   //取消氣泡
+   e.stopPropagation();
+   var sourceid = e.dataTransfer.getData("text/plain");
+   var source = document.getElementById(sourceid);
+   e.currentTarget.appendChild(source.parentNode.removeChild(source));
+}
+
+cookie ： 將少量的資料寫在一個檔案內，然後存在觀看者(client)的電腦中。
+寫入 ： document.cookie = "name=jack;expires(期限)="now.getTime()+5*60*1000";
+//now.getTime() ： 讀取網頁開啟時的時間，5*60*1000 ： 5分鐘
+讀取 ： var c =  document.cookie;
+      alert(cookies.split("=")[1]);(name：0，jack：1，split：用=號分割)
+
+localStorage ： 視窗關閉後，還保留儲存的資料。
+設定值 ： localStorage.keyname = "value";
+取值 ： var thevalue = localStorage.keyname;
+刪除值 ： 
+localStorage.removeItem("keyname");
+localStorage.clear();
+sessionStorage ： 視窗關閉後，儲存的資料不見了。
+
+Geolocation API(計算地理位置) ： 
+取得使用者的地理位置一次 ： getCurrentPosition。
+ex ： 
+navigator.geolocation.getCurrentPosition(successCallback(取回地理位置成功),errorCallback(取回地理位置失敗),{maximumAge：6000}(保留地理位置6分鐘));
+成功(經度緯度) ： function successCallback(position){
+                  alert("緯度：" + position.coords.latitude + "經度：" + position.coords.longitude);}
+錯誤 ： function errorCallback(error){ 
+        alert('執行發生錯誤! 錯誤代碼 ： '+ error.code +',錯誤訊息 ： '+error.message);} 
+
+Google API ： 
+在html中 ： <div id="map" style="width：500px; height：300px;"/>
+載入google map api ： 
+<script type="text/javascript" src="http：//maps.google.com/maps/api/js?sensor=false"/>
+建立map物件 ： 
+function initialize(){
+   //經緯度
+   var latlng = new google.maps.LatLng(緯度,經度); 
+   var myOptions = {zoom：13,center：latlng,mapTypeId：google.maps.MapTypeId.ROADMAP};
+   //zoom ： 地圖縮放等級，center ： 地圖中心，mapTypeId ： 地圖類型(ROADMAP ： 正常)
+   var map = new google.maps.Map(document.getElementById("map"),myOptions);
+   var marker = new google.maps.Marker({position：latlng,title："Hello World!" }); 
+   //position ： 產生標記，title ： 標記名稱        
+   marker.setMap(map);
+}   
+
+php ： 寫在<?php…?>之間(可讀取使用者在瀏覽器輸入的資料)[要下載並安裝mamp]
+直接用瀏覽器看網頁 ： http：//localhost：8888/php專案名稱/檔名.php(要把php專案名稱資料夾放在htdocs資料夾中)。
+變數前面要加$，在雙引號中如果變數名稱後面加英文字母要用{}把變數包住，單引號可以直接加變數。
+定義常數(寫在一個檔案中) ： define("PI",3.1415962);
+載入php檔 ： require_once "檔名.php";
+//..表示專案底下
+載入php檔(檔案在另一個資料夾) ： <?php require_once('../資料夾名稱/檔名.php'); ?> 
+ //.：將前後兩個資料合併成一個字串，<br> ： 換行
+印出字串 ： echo("大家好")."<br>";
+//echo放html標籤要用""包住
+取亂數 ： $變數 = rand(1,10); //範圍：1~10
+畫橫線 ： echo"<HR>";
+前往網站 ： header("Location：網址"); 
+sprintf(把字串存入變數不會顯示在螢幕上) ： $pi = sprintf("%.2f",3.14159);
+求閏年 ： 
+//年份
+$year = 2001; 
+//1是閏年，0不是閏年
+echo date("L",strtotime("$year-1-1"))."<br>"; 
+取得今天的時間日期 ： getdate();
+格林威治標準時間 ： date_default_timezone_set('GMT'); 
+當月是第幾個季度 ： $season = ceil((date('n'))/3);
+
+陣列 ： 
+//a[0] = 123，a[1] = 3.14，…
+第一種 ： $陣列變數 = array(123,3.14,"你","我","他"); 
+第二種 ： 
+$陣列變數[key值] = "元素值";
+第三種 ： 
+$陣列變數[] = "元素值"; 
+印出陣列元素 ： 
+//印出陣列以$key => $value為形式
+第一種 ： print_r($陣列變數); 
+第二種(只印出"com","gov","net","tw") ： 
+foreach ($陣列變數 as $value) {
+    echo "$value <BR>";
+}
+第三種 ： 
+//印出key值(唯一)與陣列元素值
+foreach ($陣列變數 as $key => $value){
+    echo "$key,$value <BR>"; 
+}
+把陣列元素一一放入指定的變數(用list) ： 
+$陣列變數 = array(1,"廖建翔","0955244562",…);
+list($ID,$name,$phone,…) = $陣列變數;
+增刪陣列元素(splice) ： 
+//把元素1,元素2,…加入陣列中
+array_splice($陣列變數,開始刪的元素位置,刪除的數量,array(元素1,元素2,…));
+//找到回傳true，找不到回傳false
+找元素出現在陣列的位置 ： strstr($陣列變數,要找的元素);
+//以切割符號切割原陣列 
+切割字串 ： $新陣列變數 = explode('切割符號',$原陣列變數);  
+
+函數 ： 
+function 函數名稱(參數){
+…}
+
+讀取使用者在表單輸入的資料 ： 
+在<form>標籤裡的action="檔名.php"，在檔名.php內可用$_POST['input標籤的name屬性'](method屬性為post)或$_GET['input標籤的name屬性'](method屬性為get)讀取使用者輸入的資料(用&分割)，不能跑檔名.php檔(因為沒資料送給檔名.php)。
+印出使用者輸入的資料陣列 ： print_r($_POST);
+//有選回傳true，沒選回傳false
+多選與單選標籤判斷 ： isset($_POST['input標籤的name屬性']); 
+讀取多選與單選標籤值 ： input標籤的name屬性給陣列名稱[]，用$取得變數=$_POST["陣列名稱"];
+印出IP位置 ： echo $_SERVER['REMOTE_ADDR'];
+印出程式在伺服器端的路徑 ： echo $_SERVER["PHP_SELF"];
+
+Cookie ： 伺服器主動送出到客戶端的瀏覽器(由伺服器或php程式產生，隨著伺服器回應的資料送回瀏覽器)。
+第一方 ： 網址列中的網站送的cookie，第三方 ： 來自夾帶在網頁上的廣告或圖片…。
+//ob_start()：開啟輸出緩衝區，一旦開啟輸出緩衝區後，所有的輸入資料都將寫入Server端內部的記憶體
+(要放在程式第一行)
+<?php 
+ ob_start();
+?> 
+寫入cookie ： setcookie(cookie名稱,cookie的值,cookie的有效期限(沒給：關閉瀏覽器後刪除),cookie的路徑,設定能存取cookie的網站);
+印出cookie ： echo $_COOKIE['cookie名稱'];
+//ob_end_flush()：將輸出緩衝區內的資料寫出至客戶端
+ob_end_flush(); 
+
+Session ： 存放在sever端的記憶體(存取使用者多項資訊，網頁瀏覽器都會被指派唯一的sesson id與其他瀏覽器做區分)。
+//session_start() ： 通知php要使用session功能(檢查有無sesson id，根據找到的season id回復所有session變數的值，否則建立一個新的session id)，可以使用$_SESSION變數
+(要放在程式第一行)
+<?php 
+ session_start();
+?> 
+釋放所有的session變數 ：  session_unset();
+
+//用foreach印二維陣列每列總和
+$sum = 0;
+foreach($陣列名稱 as $v){
+   $sum = 0;
+   foreach($v as $el){
+        $sum += $el;
+   }
+   echo "row sum = $sum<br>";
+}
+
+SQL指令 ： 
+建立表格 ： 
+Create Table 表格名稱(
+  欄位名稱1 欄位資料形態1 屬性,
+  欄位名稱2 欄位資料形態2 屬性,
+  …
+)
+新增資料(Insert Into) ： 
+Insert Into 表格名稱(欄位名稱1,欄位名稱2,…) Values(值1,值2,…)(第二筆以上要加,，最後一筆要加;)
+刪除表格(Drop) ： Drop Table 表格名稱
+//刪除表格內符合Where條件的資料 
+刪除表格內資料(Delete From 表格名稱 Where 條件) 
+把表格資料變成0筆資料(Truncate) ： Truncate Table 表格名稱
+修改資料(Update) ： 
+//修改表格內符合Where條件的資料
+Update 表格名稱 Set 欄位名稱1 = 值1,欄位名稱2 = 值2,… Where條件  
+聚合函數 ： 把多筆資料變成一筆資料(avg：平均，count：個數，max：最大值，min：最小值，sum：總和)
+挑選出表格的資料(Select) ： 
+Select(Distinct：重複的結果只顯示一筆)欄位名稱1,欄位名稱2,…(*：所有欄位資料) From表格名稱1  Where條件
+(條件可用AND或OR連結) In(值1,值2,…) Between值1AND值2(介於值1與值2的資料) Like'比對條件'(進行部分比對，%：0或多個字元(ex：'陳%'表示陳xx)，_：表示一個字元(ex：'__咖啡'表示xx咖啡)) Order By欄位名稱(排序)[ASC：漸增，DESC：漸減] Group By欄位名稱(以欄位分組進行聚合函數) Having聚合函數的條件 JOIN表格名稱2(把多個表格資料合併在一起，把相同的資料放在另一個表格中，避免修改時要修改多筆資料)on條件(ex：表格名稱1.欄位名稱 = 表格名稱2.欄位名稱)。
+
+MySQL資料庫(使用phpMyAdmin) ： 
+打開MAMP ： 開啟MAMP -> Open start page -> 選MySQL下的phpMyAdmin連結 -> 按Databases -> 新建資料庫要選utf8_general_ci。
+安裝 ： help -> install new software… -> Luna -> 輸入pdt -> PHP Development Tools。
+新增專案 ： New -> Project ->  PHP -> PHP Project -> 輸入專案名稱 -> Create project at existing location(from existing source) -> Browse… -> 找到/應用程式/MAMP/htdocs選擇新增檔案夾 -> 製作 -> 打開 -> Finish。
+建立php程式 ： New -> PHP File -> 輸入檔案名稱 -> Next -> New PHP file frame set -> Finish。
+(要刪除<frameset>
+        <frame>
+        <frame>
+       <noframes>
+       </noframes>
+       </frameset>)
+執行php程式 ： Run As -> PHP Web Application，有問題(瀏覽器網址列缺少：8888)，修改執行組態 -> Run Configurations -> Configure… -> 修改Base URL為http：//localhost：8888，再次執行。
+常用欄位資料形態 ： int(整數)，decimal(m,d)：小數(m：整數與小數位數總和,d：小數位數)，varchar(n)：變動長度字串(n：最多255個字元)，char(n)：固定長度字串，date(日期)，time(時間)，blob(圖片檔案)。
+
+用php程式更改資料到phpMyAdmin資料庫(檔案要放在htdocs資料夾中) ： 
+<?php
+    //產生連線
+    $connect = new mysqli("主機(host)名稱","使用者(user)名稱","密碼(password)","資料庫名稱");
+    if($connect->connect_error){
+	    die("連線失敗原因：" . $connect->connect_error);
+    } 
+    echo "連線成功";
+    mysqli_query($connect,"set names utf8");
+    $sql = "sql指令";
+    //$result為sql指令結果
+    $result = mysqli_query($connect,$sql);
+    echo $result;
+    mysqli_close($connect);
+?>
+sql指令 ： 
+新增資料 ： insert into 資料表名稱(欄位名稱1,欄位名稱2,…)values('值1','值2',…);
+修改資料 ： update 資料表名稱 set 欄位名稱1='值1',欄位名稱2='值2',… where 欄位名稱=條件值;
+刪除資料 ： delete from 資料表名稱 where 欄位名稱=條件值;
+
+MySQL Workbench ： 
+展開資料庫 ： 打開MySQLWorkbench -> 在資料表按滑鼠右鍵選擇"Select Row - Limit 1000"。
+設定Client端連線 ： 
+MySQL Connections按+號的按鈕 -> 在Connection Name中輸入資料表名稱 -> 設定其他值 -> 按Text Connection測試連線 -> 出現OK按鈕(Failed…)表示連線成功。 
+用終端機看資料庫 ： 
+切換資料夾 ： cd /Application/MAMP/Library/bin/
+輸入 ： ./mysql -u root -p(輸入密碼 ： root)
+開啟資料庫 ： use 資料表名稱; -> 輸入SQL指令(;為結束) 
+看MySQL參數 ： ./mysql -?
+
+建立php與MySQL連線 ： 
+$連線變數 = new PDO('mysql：host=主機名稱或主機IP(localhost); port：傾聽號; dbname=資料庫檔案名稱; charset=utf8','資料庫帳號','資料庫密碼',
+[陣列設定]array(PDO：：ATTR_EMULATE_PREPARES => false(使用新的mysql資料庫),PDO：：ATTR_ERRMODE =>PDO：：ATTR_ERRMODE_EXCEPTION(採用例外處理處理資料庫錯誤),PDO：：ATTR_PERSISTENT => true(使用持續性連線)));
+使用中文 ： $連線變數->exec("set names utf8");
+關閉php與MySQL連線 ： $連線變數 = null;
+//回傳false表示執行sql指令失敗
+執行sql指令 ： $執行變數 = $連線變數->query(sql指令); 
+查詢因為sql指令改變的欄位 ： $連線變數->exec(sql指令); 
+印出資料 ： 
+$印出變數 = $執行變數->fetchAll(PDO：：FETCH_NUM);
+echo (json_encode($印出變數)); //將資料轉成JSON(javascript object notation)格式
+echo JSON($印出變數);//將資料使用Json編碼傳回(可以出現中文)
+JSON格式的資料 ： 
+用一對{}包住一筆資料，用[]包住多筆資料，每筆資料含名稱與值，名稱一定要加""。
+ex ： {"user"："mary"} //：的左邊為名稱，：的右邊為值
+
+將資料轉成JSON格式的資料送到前端(前端(手機，平板))[用函式實作] ： 
+<?php 
+function mysql2json5($sql){
+	if(is_string($sql)){
+    	$query = mysql_query($query) or die(mysql_error());
+	} 
+        else{
+		$query = $sql;
+	}   
+        $ar = array();
+        if($total = mysql_num_rows($query)){
+            while($row = mysql_fetch_assoc($query)){
+                  $obj = array();
+                  foreach($row as $key => $value){
+				$obj[$key] = $value;
+                  }
+			array_push($ar,$obj);
+            }
+            mysql_data_seek($query,0); 
+        }
+	return json_encode($ar);
+       }
+?>
+
+JQuery ： JavaScript函式庫(Library)的一種。
+引用jQuery檔案 ： <script src="檔名.min.js"></script>
+JQueryMobile ： 屬性前有加data-
+JQueryMobile自己做主題介面 ： http：//themeroller.jquerymobile.com
+
+放在body結束標籤前要加 ： 
+jQuery(document).ready(function(){…});，減少程式碼((document).ready可省略)：$(function(){…});
+//$(this)：觸發事件的物件，用$表示函式庫(jQuery)(在不同的函式庫可能代表不同的保留字)
+取id ： $("#"id名稱);
+取class ： $(".class名稱");
+
+類別 ： 
+//幫所有的段落加入selected和highlight類別
+$("p").addClass("selected highlight");
+//移除id為wrapper的元素的blue類別
+$("#wrapper").removeClass("blue");
+
+有value屬性的標籤 ： 
+//讀取值(讀取文字用.text())
+讀取 ： $('標籤').val() 
+寫入 ： $('標籤').val("值");
+//代表<input type="text" value="Hello World!"/>
+$("input").val("Hello World!"); 
+
+用prop設屬性 ： 
+//true表示選取，false表示不選取，遇到enabled，checked，selected，disabled的屬性  
+$('標籤').prop("checked",true);
+加入文字內容(用節點) ： 
+//prepend ： html開始標籤後面、append ： html結束標籤前面、before ： html開始標籤前面、after ： html結束標籤後面 
+$('標籤').prepend("文字1").append("文字2").before("文字3").after("文字4"); 
+
+選擇器(Selector) ： 
+$("html標籤").css('屬性'：'值') ：  選擇所有html標籤設樣式。
+$("#html標籤id名稱").css('屬性'：'值') ：  選擇所有html標籤id名稱設樣式。
+$(".html標籤class名稱").css('屬性'：'值') ：  選擇所有html標籤class名稱設樣式。
+屬性選擇器 ： 
+$('html標籤[input屬性="input值"]').css('屬性','值');
+//=表示等於input值，!=表示不等於input值，$表示末字等於input值，^表示首字等於input值，|表示中間等於input值
+階層選擇器 ： 
+$("ul > li") ： 選擇ul標籤下面的li標籤。
+表單選擇器(用在form標籤下的input標籤) ： 
+$("：button") ： input標籤是按鈕。
+
+用each讀出選擇器資料 ： 
+//讀取選擇器中每一筆資料，用$(this)讀出被選取的元素
+$('選擇器名稱').each(function(){…}); 
+//讀取陣列中資料
+$.each(陣列名稱,function(陣列的索引值,陣列的值){…}); 
+//讀取JSON(物件加陣列)資料(用物件名稱.屬性)
+$.each(陣列名稱,function(陣列的索引值,物件名稱(自己取)){…}); 
+
+建立事件 ： 
+//網頁上的內容動態產生，標籤必須是不會動態產生，已經把html標簽寫好，找不到可直接用document 
+$('標籤').on('事件名稱','class名稱',function(){…});
+//事件只發生一次
+$('標籤').one('事件名稱',function(){…}); 
+//parents ： 一直往上找到符合的標籤
+parents('標籤') 
+.attr('標籤') ： 取標籤裡的值。
+
+廣播 : 
+//$on：用來接收Events、$emit(父級)：發送Event，發送的方向是從目前的scope往上發送到parent、$broadcast(子級)：發送Event，發送的方向是從目前的scope往下發送到child
+ex :
+<div ng-controller="ParentCtrl">                  //父级  
+    <div ng-controller="SelfCtrl">                //自己  
+        <a ng-click="click()">click me</a>  
+        <div ng-controller="ChildCtrl"></div>     //子级  
+    </div>  
+    <div ng-controller="BroCtrl"></div>           //平级  
+</div>
+  
+$scope.controller('SelfCtrl', function($scope) {  
+    $scope.click = function () {  
+        $scope.$broadcast('to-child', 'child');  //發送Event給父級
+        $scope.$emit('to-parent', 'parent');  //發送Event給子級
+    }  
+});  
+  
+$scope.controller('ParentCtrl', function($scope) {  
+    $scope.$on('to-parent', function(d,data) {  
+        console.log(data);         //父级能得到值  
+    });  
+    $scope.$on('to-child', function(d,data) {  
+        console.log(data);         //子级得不到值  
+    });  
+});  
+  
+$scope.controller('ChildCtrl', function($scope){  
+    $scope.$on('to-child', function(d,data) {  
+        console.log(data);         //子级能得到值  
+    });  
+    $scope.$on('to-parent', function(d,data) {  
+        console.log(data);         //父级得不到值  
+    });  
+});  
+  
+$scope.controller('BroCtrl', function($scope){  
+    $scope.$on('to-parent', function(d,data) {  
+        console.log(data);        //平级得不到值  
+    });  
+    $scope.$on('to-child', function(d,data) {  
+        console.log(data);        //平级得不到值  
+    });  
+});  
+
+動畫(animate) ： 
+$('標籤').animate({css樣式},毫秒,執行時的速度,動畫完成時執行的函數);
+
+Ajax(xml)：.php檔回傳給client端的資料格式。
+//回傳資料變數就是從Server端回傳的結果
+$.get('.php檔',{'.php檔中$_GET['名稱']的名稱'：值(自定)},function(回傳資料變數){…});
+$.post('.php檔',{'.php檔中$_POST['名稱']的名稱'：值(自定)},function(回傳資料變數){…});
+//取得JSON格式資料
+$.getJSON('.php檔',{},function(回傳資料變數){…});
+
+Mac快速鍵 ： 
+改檔名 ： enter。
+全選 ： command + A。
+剪下 ： command + X。
+複製 ： command + C。
+貼上 ： command + V。
+復原 ： command + Z。
+儲存(抓模擬器截圖，檔案會存在桌面) ： command + S。
+搜尋 ： command + F。
+註解多行 ： command + /。
+抓螢幕截圖 ： command + shift + 3。
+抓螢幕截圖(選範圍) ： command + shift + 4。
+切到應用程式 ： command + tab。
+切到桌面 ： fn + F11。
+
+Swift(標頭檔(.h檔)與實作檔(.m檔)合併)[最後不用加;] ： 
+
+網路資源 : 
+icon搜尋網站 ： 
+http://www.flaticon.com/
+https：//www.iconfinder.com/
+ios框架 : https://www.oschina.net/ios/home
+看IOS app排名 ： http：//www.ann9.com/
+使用者介面樣式 : http://www.mobile-patterns.com
+電子信箱 ： john78530@yahoo.com.tw 
+密碼 ： student
+下載可用的程式碼(搜尋後按Download ZIP) ： https：//github.com/search?utf8=%E2%9C%93&q=github  
+帳 ： john78530
+密 ： john19890530
+iOS app開發教學 ： http：//www.appcoda.com/ios-programming-course/
+蘋果的官網Source Code ： https：//developer.apple.com/library/ios/navigation/#section=Resource%20Types&topic=Sample%20Code
+做App原型 ： https://projects.invisionapp.com/d/login
+
+Email ： john78530@yahoo.com.tw
+密 ： student
+
+
+基礎 : 
+import ： 取得外部框架。
+
+@IBAction ： 宣告在方法前面時，表示將程式碼與介面做連結。
+Get started with a playground ： 右邊可以顯示執行的結果。
+開多個視窗 ： 按住shift + option，滑鼠選擇Main.storyboard。
+除錯(程式在條件不滿足時會自動中斷) ： assert(條件,"條件不滿足時顯示訊息")
+
+.xib檔 ： 儲存使用者介面。
+呼叫屬性 ： 用.或[]。
+自動釋放池(先進後出) ： @autoreleasepool{…}
+程式碼第一次執行 ： main.m檔，第二次執行 ： AppDelegate.m檔。
+快速開啟類別(class) ： commend + shift + o
+前往資源庫 ： 桌面按前往(按住option) -> 資源庫。
+修改BundleID ： Info.plist的Bundle identifier。
+使用自己電腦的鍵盤 ： Hardware -> Keyboard -> Connect hardware keyboard。
+取亂數 ： arc4random()%x(表示取0~x-1的亂數)。
+查關鍵字 ： option + 搜尋的字。
+模擬器縮放 ： 按住option(在方法上按住option可以看方法的內容與使用)。
+改變模擬器大小(數字越大是縮小) ： command + 1、2、3。
+旋轉模擬器方向 ： command + 上、下、左、右。 
+開其他的視窗 ： alt(option) + shift + 滑鼠點檔名。
+看編譯順序 ： 選專案名稱 -> Build Phases -> Compile Sources。
+看根據日期修改的程式碼 ： 按右上角的Show the Version editor鍵。
+在storyboard中要選到想變換的畫面內容 ： 按住shift + 滑鼠右鍵。
+查詢方法 ： 按住command再選字用滑鼠左鍵點兩下。
+物件或方法內再呼叫其他方法 ： selector：@selector(方法名稱)
+產生方法連結變數 ： 在Main.storyboard按右上角的Show the Assistant editor鍵選變數按住control鍵拉到.m檔(有連結出現實心)。
+印出方法資訊(_cmd：方法名稱) ： NSLog(@"cmd：%@",NSStringFromSelector(_cmd)); 
+查連結 ： 在Main.storyboard選變數按control加滑鼠右鍵出現連結有三角形的要刪除。
+把常用的code用滑鼠選住拖到右下角的{}中在最下面按Edit把Completion Shortcut取別名在程式碼輸入按enter鍵會自動產生。
+還原之前寫的程式碼 ： 
+檔名.h或.m檔右邊出現M時(一開始產生專案時要勾選Create Git repository on)，在要還原的檔名按滑鼠右鍵 -> Source Control -> Discard Changes in "檔名.h或.m" -> Discard Changes。
+View Controller的執行順序 ： viewDidLoad -> viewWillAppear -> viewDidAppear -> viewWillDisappear -> viewDidDisappear -> viewDidUnload -> dealloc。
+-(void)didReceiveMemoryWarning的方法執行 ： 開啟模擬器後用Hardware -> Simulate Memory Warning。
+dSym檔案 ： Project -> Archive -> Organizer Archives -> Application -> Show in Finder -> 在檔案按右鍵 -> 顯示套件內容 -> dSYMs -> 裡面的檔案壓縮成zip檔。
+在Main.storyboard中(w(width)：寬度、h(height)：高度) ： Compact(IPhone版)、Regular(IPad版)、Any(IPhone與IPad版)。
+發生key value coding-complaint錯誤 ： 找不到相對應的@property。
+.pcm錯誤 ： 可能修改到系統唯讀檔，重灌Xcode或Product -> 按住option -> Clear Build Folder。
+版本設定 ： 選專案名稱 -> TARGETS的專案名稱 -> General -> Deployment Target。
+
+
+
+Debug技巧 :
+看程式當掉在哪一行 ： Add Exception Breakpoint。  
+編譯(程式完成小功能時就編譯) ： commend + R。
+雙點擊home鍵 ： command + shift + H(H要按兩次)。
+在編譯時加中斷點 ： 
+fn + f5 ： 從中斷點繼續執行。
+fn + f6 ： 程式往下執行。
+fn + f7 ： 函式呼叫。
+fn + f8 ： 回到函式呼叫點。
+程式已執行完 ： program ended with exit code ： 0
+
+MVC(Model-View-Controller) : 將使用者介面分成三個區塊。
+
+模型(Model) ： 負責資料的保存或操作。
+
+視圖(View) ： 管理資訊的顯示。
+
+控制器(Controller) ： 將使用者在視圖上的互動轉譯成在模型中要去執行的動作。
+
+適合任何大小模擬器(旋轉成橫向不會改變位置)[Autolayout] ： 
+Align ： 右邊數字可以設定對齊中間點多遠，設成0為正中間。 
+Pin ： 設定物件的上下左右間距。
+Issues ： Clear Constraint(清除所有設定的位置)，Update Frames(重新設定位置)[出現橘色線或紅色線時]。
+
+選Constant左邊的+號 ： Regular表示較大的畫面空間，Compact表示較小的畫面空間。
+系統修改 ： 選ViewController的黃色小箭頭 -> 選Update Frame -> Fix Misplacement。
+
+
+屬性 ： 
+weak ： 變成nil時就會被釋放掉。
+copy ： 在設值時拷貝新舊資料。
+retain ： 通知編譯器對新的資料發送保留，確保資料在程式運行時不會從記憶體中被清除。
+assign ： 在設值時替換新舊資料(預設)。
+strong ： 結束編譯時自動釋放記憶體(擁有這個變數時，其他檔案不能更改)。
+atomic ： 防止在寫未完成的時候被另外一個執行緒讀取。
+readonly ： 唯讀。
+readwrite ： 可讀可寫(預設)。
+nonatomic ： 在多執行緒中不會被鎖住。
+
+.m檔中跨方法使用相同變數 ： 
+方法一 ： 在.h檔中宣告變數用@property(屬性)變數型態 *變數名稱;，在.m檔中使用變數名稱前面要加self.(self ： 指向自己變數的指標)。
+方法二 ： 在.m檔中宣告變數用@property(屬性)變數型態 *變數名稱;，在.m檔中使用變數名稱前面要加_。
+方法三 ： 在.m檔中的@interface宣告變數用{}包住，在.m檔中直接使用變數。
+
+自動improt檔案 ： 
+產生.pch檔 ： Supporting Files -> new file -> Other -> PCH File -> 輸入檔名 -> Create。
+選專案 -> TARGETS的專案名稱 -> Build Settings -> 搜尋prefix header找到Prefix Header -> 輸入專案名稱/檔名.pch，在pch檔中加入要#import的檔案就會在專案全部的檔import不用在.h檔與.m檔中#import。
+
+宣告 ： 
+宣告常數 ： let 常數 = 數值
+宣告變數 ： var 變數 = 數值
+讀取變數的值 ： 變數!
+指定變數型態(?表示可以不用給值) ： 
+var 變數名稱 ： 型態?
+型態轉成字串 ： \(變數)
+                                                                                                                                       陣列 ： 
+var 陣列名稱 = [值1,值2,…]
+
+字典 ： 
+var 字典名稱 = [鍵1：值1,鍵2：值2,…]
+指定字典的值 ： 字典名稱[鍵] = 值
+指定字典型態 ： 
+var 字典名稱 ： Dictionary<鍵型態,值型態> = [鍵1：值1,鍵2：值2,…]
+用for迴圈印出字典 ： 
+for(鍵變數,值變數) in 字典名稱{
+   println("\(鍵變數)=\(值變數)");
+}
+取得字典第一個字 ： 
+let 字典陣列 = ["元素1","元素二",…]
+var 字典型態陣列 = [String：[String]]()
+for 尋找變數 in 字典陣列{
+    //取得第一個字母並建立字典，substringToIndex ： 回傳索引對應的字串
+    let 索引變數 = 尋找變數.substringToIndex(advance(尋找變數.startIndex,1))
+    if var 找到變數 = 字典型態陣列[索引變數]{
+           找到變數.append(尋找變數)
+           字典型態陣列[索引變數] = 找到變數
+    } 
+    else{
+          字典型態陣列[索引變數] = [尋找變數]
+    }
+}
+
+結構 ： 
+struct 結構名稱{…}
+類別 ： 
+class 類別名稱{…}
+使用類別或結構 ： 
+var 類別(結構)變數 = 類別(結構)名稱()
+用類別(結構)變數.成員來存取或讀取值。
+
+繼承 ： 
+class 子類別名稱：父類別名稱{
+init(){
+    super.init()
+…}}
+重寫(override) ： 可以改寫繼承來的方法，父類別用@final可以防止重寫。
+
+方法(func)[@物件連結表示只有該物件能使用，可以不寫] ： 
+@物件連結 func 方法名稱(參數1：參數型態1,參數2：參數型態2,…) -> (回傳值變數：回傳值型態){…
+return…}
+呼叫方法 ： 類別變數.方法名稱(引數1,引數2,…)
+
+列舉(enum) ： 
+enum 列舉名稱{
+    case 值1,值2,…
+}
+使用列舉 ： 
+var 列舉變數 ： 列舉名稱
+列舉變數 = 列舉名稱.值
+switch 列舉變數{
+  case .值：
+  …
+  default：
+  …
+}
+
+協定(protocol) ： 變數與變數中傳遞訊息。
+定義 ： 
+protocol 協定名稱{…}
+實作協定(結構、類別、列舉) ： 用：協定名稱實作協定。
+
+閉包(closure) ： 可以在程式中做傳遞的程式碼區塊 
+閉包名稱({(參數1：參數型態1,參數2：參數型態2,…) -> 回傳型態 in
+…})
+排序閉包(第二個值比第一個值大回傳true) ： 
+閉包名稱.sort({s1 ： String,s2 ： String} -> Bool in return s1 < s2)})
+使用閉包($0 ： 第一個字串,$1 ： 第二個字串) ： 
+閉包名稱.sort({$0 < $1})
+
+泛型 ： 用<泛型名稱>表示型態，可以處理多個形態。
+
+Tuple(可以回傳多個值得方法)： 
+let Tuple變數 = (名稱1:數值1,名稱2:數值2…)
+//取值
+print("\(Tuple變數.名稱)")
+
+guard else(條件不成立時執行else) ：
+guard 條件 else{
+…}
+
+隱藏狀態列 ： 
+override func prefersStatusBarHidden() -> Bool{
+   return true
+} 
+
+轉型 ：
+as! ： 清楚要轉的型態。
+as?(? ： 表示是否有其值) ： 不清楚要轉的型態。
+
+客製化字型 ： 
+把.otf檔與.ttf檔拖入新增資料夾中，選專案名稱 -> Info -> Custom iOS Target Properties -> 按+號加入Fonts provided by application -> Item 數字的Value選檔案字型
+font屬性設為UIFont(name："檔名",size：25.0) //字型大小25
+
+圖片變成圓形 ： 
+@IBOutlet var 圖片變數：UIImageView!
+圖片變數.layer.cornerRadius = 圖片變數.frame.size.width/2
+圖片變數.clipsToBounds = true
+
+顯示在中間的訊息(UIAlertController) ： 
+let 視窗變數 = UIAlertController(title："標題文字",message："訊息文字",preferredStyle：UIAlertControllerStyle.Alert)
+視窗變數.addAction(UIAlertAction(title："按鈕名稱",style：UIAlertActionStyle.Default,handler：nil))
+//presentViewController ： 顯示訊息
+presentViewController(視窗變數,animated：true,completion：nil)
+
+表格(TableView) ： 
+加入協定 ： UITableViewDelegate,UITableViewDataSource
+//刪除tableView的分隔線 ： tableView.tableFooterView = UIView(frame：CGRectZero)
+func tableView(tableView：UITableView,numberOfRowsInSection section：Int) -> Int{
+     //numberOfRowsInSection ： 每個section有幾筆資料
+     return 陣列名稱.count
+}
+func tableView(tableView：UITableView,cellForRowAtIndexPath indexPath：NSIndexPath) -> UITableViewCell{
+      //cellForRowAtIndexPath ： 每筆資料長什麼樣子
+      let 識別變數 = "cell的identifier辨識字"
+      let 每筆資料變數 = tableView.dequeueReusableCellWithIdentifier(識別變數,forIndexPath：indexPath) as UITableViewCell
+      //indexPath.row : 取得目前正在顯示的列
+      每筆資料變數.textLabel?.text = 陣列名稱[indexPath.row]
+      每筆資料變數.imageView?.image = UIImage(named："檔名")
+      return 每筆資料變數
+}
+//選取某一列 ： didSelectRowAtIndexPath
+override func tableView(tableView：UITableView,didSelectRowAtIndexPath indexPath：NSIndexPath){…
+//deselectRowAtIndexPath ： 取消某一列的選取
+tableView.deselectRowAtIndexPath(indexPath,animated：true)
+}
+//刪除某一列 ： 
+override func tableView(tableView：UITableView,commitEditingStyle editingStyle：UITableViewCellEditingStyle,forRowAtIndexPath indexPath：NSIndexPath){
+   //indexPath的參數提供要刪除Cell的列數
+   if editingStyle == .Delete{
+     要移除的物件變數.removeAtIndex(indexPath.row)
+     //deleteRowsAtIndexPaths ： 從tableView中刪除，可以用tableView.reloadData()取代
+     tableView.deleteRowsAtIndexPaths([indexPath],withRowAnimation：.Fade)
+   }
+}
+//Self Sizing Cells：表格自動計算Cell的大小並動態調整列高(加在viewDidLoad()中)
+//estimatedRowHeight：設定Cell估算的列高
+tableView.estimatedRowHeight = 80.0
+//UITableViewAutomaticDimension：依內容動態調整Cell的大小 
+tableView.rowHeight = UITableViewAutomaticDimension
+
+表格動畫 ： 
+override func tableView(tableView：UITableView,willDisplayCell cell：UITableViewCell, forRowAtIndexPath indexPath：NSIndexPath){
+//開始動畫(alpha = 0 ： 全透明)
+cell.alpha = 0
+//結束動畫(alpha = 1 ： 完全不透明)
+UIView.animateWithDuration(1.0,animations：{cell.alpha = 1})
+} 
+
+場景轉換(使用導覽控制器(Navigation Controller)) ： 
+override func prepareForSegue(segue：UIStoryboardSegue,sender：AnyObject!){
+    //設segue的identifier ： 在Main.storyboard選擇segue -> Storyboard Segue -> identifier
+     if segue.identifier == "segue的identifier"{
+        let 目的地的controller變數 = segue.destinationViewController as 目的地的ViewController
+        目的地的controller變數.存的資料變數 = 傳的資料變數
+        //補充 ： 用tableView傳到下一個ViewController 
+       //tableView.indexPathForSelectedRow ： 在tableView選擇的行數 
+        let 行數變數 = tableView.indexPathForSelectedRow()
+        要存的陣列變數 = 要傳的陣列變數[行數變數.row]
+     }
+}
+//把導覽控制器變成亮色系
+override func preferredStatusBarStyle() -> UIStatusBarStyle{
+     return .LightContent
+}
+//設定隱藏導覽列
+override func viewWillAppear(animated: Bool){
+     super.viewWillAppear(animated)
+     //將導覽列隱藏
+     navigationController?.hidesBarsOnSwipe = true
+}
+//設定顯示導覽列
+override func viewWillAppear(animated: Bool){
+     super.viewWillAppear(animated)        
+     navigationController?.hidesBarsOnSwipe = false
+     navigationController?.setNavigationBarHidden(false, animated: true)
+}
+
+取得圖片(UIImagePickerController) ： 
+//isSourceTypeAvailable ： 判斷圖片是否存在，.PhotoLibrary改成.Camera為拍照的相機
+if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary){
+   let 取得變數 = UIImagePickerController()
+       取得變數.allowsEditing = false
+       取得變數.delegate = self
+       取得變數.sourceType = .PhotoLibrary
+    //presentViewController ： 顯示圖片
+       self.presentViewController(取得變數,animated：true,completion：nil)
+   }
+}
+//imagePickerController ： 使用這挑選完照片後呼叫
+加入協定 ： UIImagePickerControllerDelegate,UINavigationControllerDelegate
+@IBOutlet var 圖片變數：UIImageView!
+func imagePickerController(picker：UIImagePickerController,didFinishPickingMediaWithInfo info：[NSObject：AnyObject]){
+   圖片變數.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+   圖片變數.contentMode = UIViewContentMode.ScaleAspectFill
+   圖片變數.clipsToBounds = true
+   dismissViewControllerAnimated(true,completion：nil)
+}
+
+
+導引畫面(UIPageViewController) : 
+新增Swift檔案加入協定 ： UIViewController，並命名Storyboard ID
+拉一個Page View Controller的元件並命名Storyboard ID
+新增Swift檔案加入協定 ： UIPageViewController, UIPageViewControllerDataSource
+//設定第一個導覽頁面(在viewDidLoad()中加入)
+//將資料源設為自己  
+dataSource = self
+//建立第一個導覽頁面  
+if let startingViewController = viewControllerAtIndex(0){
+    setViewControllers([startingViewController], direction: .Forward, animated: true, completion: nil)
+
+}
+//viewControllerBeforeViewController ： 上一頁要顯示什麼?
+func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    var index = (viewController as! 加入UIViewController協定的檔名).index   
+    index--       
+    return viewControllerAtIndex(index)
+}
+//viewControllerAfterViewController ： 下一頁要顯示什麼?
+func pageViewController(pageViewController: UIPageViewController, 
+viewControllerAfterViewController viewController: UIViewController) -> UIViewController? { 
+    var index = (viewController as! 加入UIViewController協定的檔名).index
+    index++     
+    return viewControllerAtIndex(index)
+}
+func viewControllerAtIndex(index: Int) -> 加入UIViewController協定的檔名? {
+    if index == NSNotFound || index < 0 || index >= 最後一頁{
+       return nil
+    }
+    //建立視圖並傳遞資料
+    if let 畫面變數 = storyboard?.instantiateViewControllerWithIdentifier("加入UIViewController協定的Storyboard ID") as? 加入UIViewController協定的檔名{
+       畫面變數.資料 = 要傳遞的資料
+       return 畫面變數
+    }
+    return nil
+}
+//顯示導覽畫面
+if let 畫面導覽變數 = storyboard?.instantiateViewControllerWithIdentifier("Page View Controller的Storyboard ID") as? 加入UIPageViewController協定的檔名 {
+    presentViewController(畫面導覽變數, animated: true, completion: nil)
+}
+
+
+搜尋欄(UISearchController) ： 
+加入協定 ： UISearchResultsUpdating
+var 搜尋欄變數 ： UISearchController!
+//建立物件，傳入nil表示搜尋結果會顯示在同一個頁面中
+搜尋欄變數 = UISearchController(searchResultsController：nil)
+//儲存搜尋結果
+var 搜尋結果陣列 ： [型態] = []
+//顯示搜尋欄
+搜尋欄變數.searchBar.sizeToFit()
+搜尋欄變數.searchResultsUpdater = self
+//dimsBackgroundDuringPresentation ： 在搜尋時，底下其他表格是否變成暗淡狀態
+搜尋欄變數.dimsBackgroundDuringPresentation = false
+//過濾內容
+func filterContentForSearchText(searchText：String){
+    搜尋結果陣列 = 原來陣列.filter({(要搜尋變數：型態) -> Bool in
+    //rangeOfString ： 檢查名稱是否包含在搜尋名稱內
+    let 搜尋變數 = 要搜尋變數.name.rangeOfString(searchText,options：NSStringCompareOptions.CaseInsensitiveSearch)
+            return 搜尋變數 != nil
+    })
+}
+//更新搜尋完後tableView資料
+func updateSearchResultsForSearchController(searchController：UISearchController){
+     let 搜尋文字變數 = searchController.searchBar.text
+     filterContentForSearchText(搜尋文字變數)
+     tableView.reloadData()
+}
+override func tableView(tableView：UITableView,numberOfRowsInSection section：Int) -> Int{
+     //active為true時顯示搜尋結果
+     if 搜尋欄變數.active{
+        return 搜尋結果陣列.count
+     }
+     else{
+        return self.原來陣列.count
+     }
+}
+//在使用者滑動表格內任一格時，不顯示搜尋結果
+override func tableView(tableView：UITableView,canEditRowAtIndexPath indexPath：NSIndexPath) -> Bool{
+    if 搜尋欄變數.active{
+       return false
+    }
+    else{
+       return true
+    }
+}
+
+載入網頁內容(UIWebView) ： 
+@IBOutlet weak var 網頁變數：UIWebView!
+if let 網址變數 = NSURL(string："網址"){
+   let 載入變數 = NSURLRequest(URL：網址變數)
+   網頁變數.loadRequest(載入變數)
+}
+
+讀取JSON格式資料 ： 
+let 網址變數 = "網址"
+//宣告儲存Loan物件的陣列
+var 儲存陣列變數 = [Loan]()
+//分割JSON資料
+func parseJsonData(data：NSData) -> [Loan]{
+     var 錯誤變數：NSError?
+     let 取得分割結果變數 = NSJSONSerialization.JSONObjectWithData(data,options：NSJSONReadingOptions.MutableContainers,error：&error) as? NSDictionary
+        //處理錯誤
+        if 錯誤變數 != nil{
+            println(錯誤變數?.localizedDescription)
+        }
+        //分割JSON資料
+        let 分割資料變數 = 取得分割結果變數?["：[前的標題變數"] as! [AnyObject]
+        for 分割片段變數 in 分割資料變數{
+            let 分割變數 = Loan()
+            儲存變數 = 分割片段變數["：前的屬性變數"] as! 屬性型態
+            …
+            儲存陣列變數.append(分割變數)
+        }
+        return 儲存陣列變數
+}
+//接收資料
+func getLatestLoans(){
+    let 接收資料變數 = NSURLRequest(URL：NSURL(string：網址變數)!)
+    let 傳輸變數 = NSURLSession.sharedSession()
+        let 資料變數 = 傳輸變數.dataTaskWithRequest(接收資料變數,completionHandler：{(data, response,error) -> Void in
+            //錯誤處理
+            if error != nil{
+                println(error.localizedDescription)
+            }
+            //解析JSON資料
+            self.儲存陣列變數 = self.parseJsonData(data)
+            //重畫表格
+            dispatch_async(dispatch_get_main_queue(),{
+                self.tableView.reloadData()
+            })
+        })
+        資料變數.resume()
+}
+
+傳送郵件(email) ： 
+import MessageUI
+實作(在class名稱：後面加入) ： MFMailComposeViewControllerDelegate
+//顯示郵件編輯器
+func showEmail(attachmentFile：String){
+        if !MFMailComposeViewController.canSendMail(){
+        return
+        }
+        //初始化郵件
+        let 標題變數 = "標題"
+        let 內容變數 = "內容"
+        let 收件人變數 = ["收件人郵件"]
+        let 郵件變數 = MFMailComposeViewController()
+        郵件變數.mailComposeDelegate = self
+        郵件變數.setSubject(標題變數)
+        郵件變數.setMessageBody(內容變數,isHTML：false)
+        郵件變數.setToRecipients(收件人變數)
+        //加入郵件名稱及附件檔        
+        let 檔案變數 = attachmentFile.componentsSeparatedByString(".")
+        let 檔名變數 = 檔案變數[0]
+        let 附檔名變數 = 檔案變數[1]
+        //使用NSData讀取檔案
+        let 檔案路徑變數 = NSBundle.mainBundle().pathForResource(檔名變數,ofType：附檔名變數)
+        let 讀取變數 = NSData(contentsOfFile：檔案路徑變數!)
+        //判斷MIME型態(查詢 ： http：//www.iana.org/assignments/media-types/media-types.xhtml)
+        var 判斷變數 = ""
+        switch 附檔名變數{
+            case "jpg"：mimeType = "image/jpeg"
+            case "png"：mimeType = "image/png"
+            case "doc"：mimeType = "application/msword"
+            case "ppt"：mimeType = "application/vnd.ms-powerpoint"
+            case "html"：mimeType = "text/html"
+            case "pdf"：mimeType = "application/pdf"
+            case "avi" ： mimeType = "video/avi"
+            case "mp4" ： mimeType = "video/mp4"
+            case "mov" ： mimeType = "video/quicktime"
+            case "wmv" ： mimeType = "video/x-ms-wmv"
+            default：mimeType = ""
+        }
+        //加入附件檔
+        郵件變數.addAttachmentData(讀取變數,mimeType：mimeType,fileName：檔名變數)
+        //將郵件呈現在畫面上
+        presentViewController(郵件變數,animated：true,completion：nil)
+}
+func mailComposeController(controller：MFMailComposeViewController!,didFinishWithResult result：MFMailComposeResult error：NSError!){
+        switch result.value{
+            case MFMailComposeResultCancelled.value：
+                println("Mail cancelled")
+            case MFMailComposeResultSaved.value：
+                println("Mail saved")
+            case MFMailComposeResultSent.value：
+                println("Mail sent")
+            case MFMailComposeResultFailed.value：
+                println("Failed to send：\(error.localizedDescription)")
+            default：break
+        
+        }
+        dismissViewControllerAnimated(true,completion：nil)
+}
+
+傳送簡訊(SMS) ： 
+不用SMS傳訊息 ： UIAppliction.sharedApplication().openURL(NSURL(string："sms：12345678")!)
+實作(在class名稱：後面加入) ： MFMessageComposeViewControllerDelegate
+func sendSMS(attachment：String){
+     if !MFMessageComposeViewController.canSendText(){
+        let 錯誤訊息變數 = UIAlertController(title："SMS Unavailable",message："Your device is not capable of sending SMS.",preferredStyle：.Alert)
+        錯誤訊息變數.addAction(UIAlertAction(title："OK",style：.Default,handler：nil))
+            self.presentViewController(錯誤訊息變數,animated：true,completion：nil)
+            return
+        }
+        //SMS資訊
+        let 訊息變數 = MFMessageComposeViewController()
+        訊息變數.messageComposeDelegate = self
+        訊息變數.recipients = ["12345678","72345524"]
+        訊息變數.body = "訊息內容"
+        //顯示訊息
+        presentViewController(訊息變數,animated：true,completion：nil)
+}
+//判斷是否傳送成功
+func messageComposeViewController(controller：MFMessageComposeViewController!, didFinishWithResult result：MessageComposeResult){
+        switch result.value{
+            case MessageComposeResultCancelled.value：
+                println("SMS Cancelled")
+            case MessageComposeResultFailed.value：
+                let 錯誤訊息變數 = UIAlertController(title："Failure",message："Failed to send the message.",preferredStyle：.Alert)
+               錯誤訊息變數.addAction(UIAlertAction(title："OK",style：.Default,handler：nil))
+                self.presentViewController(錯誤訊息變數,animated：true,completion：nil)
+            case MessageComposeResultSent.value：
+                println("SMS sent")
+            default：break
+        }
+        dismissViewControllerAnimated(true,completion：nil)
+}
+
+取得網頁資料(讀取XML) ： 
+實作方法 ： 
+func parserDidStartDocument(parser：NSXMLParser!) ： 讀取開始。
+func parserDidEndDocument(parser：NSXMLParser!) ： 結束讀取。
+//讀取錯誤呼叫
+func parser(parser：NSXMLParser!,parseErrorOccurred parseError：NSError!){
+     println(parseError.localizedDescription)
+}
+func parser(parser：NSXMLParser!,didStartElement elementName：String!,namespaceURI：String!, qualifiedName qName：String!,attributes attributeDict：[NSObject：AnyObject]!){
+        currentElement = elementName
+        if currentElement == "開始標籤"{
+            currentTitle = ""
+            currentDescription = ""
+            currentPubDate = ""
+        }
+}
+private var 讀取變數：[(title：String,…)]=[] //把讀到的標籤(ex ： <title>)的資料存入陣列中
+//儲存標籤的內容
+private var 儲存變數：String = ""{
+     didSet{
+            儲存變數 = 儲存變數.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+    }
+}
+private var parserCompletionHandler：([(title：String,…)] -> Void)? //解析完成後處理
+func parser(parser：NSXMLParser!,didEndElement elementName：String!,namespaceURI：String!, qualifiedName qName：String!){
+   if elementName == "結束標籤"{
+            var 擷取變數 = (title：儲存變數)
+            讀取變數 += [擷取變數]
+   }
+}
+
+錄音 ： 
+import AVFoundation
+實作(在class名稱：後面加入) ： AVAudioRecorderDelegate,AVAudioPlayerDelegate
+var 錄音變數：AVAudioRecorder?
+var 播放變數：AVAudioPlayer?
+//宣告按鈕變數
+@IBOutlet weak var 播放按鈕變數：UIButton!
+@IBOutlet weak var 停止按鈕變數：UIButton!
+@IBOutlet weak var 錄音按鈕變數：UIButton!
+//設定音訊檔
+var 音訊變數 = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory,inDomains：NSSearchPathDomainMask.UserDomainMask).first as! NSURL
+var 音訊名稱變數 = 音訊變數.URLByAppendingPathComponent("123.m4a")
+//設定音訊來源(session)
+let 音訊來源變數 = AVAudioSession.sharedInstance()
+音訊來源變數.setCategory(AVAudioSessionCategoryPlayAndRecord,withOptions：AVAudioSessionCategoryOptions.DefaultToSpeaker,error：nil)
+//錄製器設定
+var 錄制器變數 = [AVFormatIDKey：kAudioFormatMPEG4AAC,AVSampleRateKey：44100.0,AVNumberOfChannelsKey：2]
+//錄製器初始化
+錄音變數 = AVAudioRecorder(URL：音訊名稱變數,settings：錄制器變數 as [NSObject：AnyObject],error：nil)
+錄音變數?.delegate = self
+錄音變數?.meteringEnabled = true
+錄音變數?.prepareToRecord()
+//錄製按鈕
+@IBAction func record(sender：AnyObject){
+    //停止音訊播放器
+    if let 音訊播放變數 = 播放變數{
+         if 音訊變數.playing{
+            音訊播放變數.stop()
+            播放按鈕變數.setImage(UIImage(named："play"),forState：UIControlState.Normal)
+            播放按鈕變數.selected = false
+         }
+    }
+    if let 錄音播放變數 = 錄音變數{
+        if !錄音播放變數.recording{
+           let 錄音音訊變數 = AVAudioSession.sharedInstance()
+              錄音音訊變數.setActive(true,error：nil)
+              //開始錄音
+              錄音播放變數.record()
+              錄音按鈕變數.setImage(UIImage(named："recording"),forState：UIControlState.Selected)
+              錄音按鈕變數.selected = true  
+        } 
+        else{
+              //暫停錄音
+                錄音播放變數.pause()
+                錄音按鈕變數.setImage(UIImage(named："record"),forState：UIControlState.Normal)
+                錄音按鈕變數.selected = false
+        }
+   }
+}
+//播放錄音
+@IBAction func play(sender：AnyObject){
+   if let 播放音訊變數 = 錄音變數{
+      if !播放音訊變數.recording{
+          播放變數 = AVAudioPlayer(contentsOfURL：播放音訊變數.url,error：nil)
+          播放變數?.delegate = self
+          播放變數?.play()
+          播放按鈕變數.setImage(UIImage(named："playing"),forState：UIControlState.Selected)
+          播放按鈕變數.selected = true
+      }
+   }
+}
+//處理錄音過程中斷
+func audioPlayerDidFinishPlaying(player：AVAudioPlayer!,successfully flag：Bool){
+        播放按鈕變數.setImage(UIImage(named："play"),forState：UIControlState.Normal)
+        播放按鈕變數.selected = false
+        let 錄音完成訊息變數 = UIAlertController(title："Finish Playing",message："Finish playing the recording!",preferredStyle：.Alert)
+        錄音完成訊息變數.addAction(UIAlertAction(title："OK",style：.Default,handler：nil))
+        self.presentViewController(錄音完成訊息變數,animated：true,completion：nil)
+}
+
+相機 ： 
+@IBOutlet weak var 相機按鈕變數：UIButton!
+let 相機變數 = AVCaptureSession()
+var 前鏡頭變數：AVCaptureDevice?
+var 後鏡頭變數：AVCaptureDevice?
+var 目前相機變數：AVCaptureDevice?
+var 影像變數：UIImage?
+var 輸出影像變數：AVCaptureStillImageOutput?
+var 預覽層變數：AVCaptureVideoPreviewLayer?
+var 滑動辨識器變數 = UISwipeGestureRecognizer()
+var 放大辨識器變數 = UISwipeGestureRecognizer()
+var 縮小辨識器變數 = UISwipeGestureRecognizer()
+//使用權解析度照相
+相機變數.sessionPreset = AVCaptureSessionPresetPhoto
+//取得前後鏡頭拍照
+let 相機裝置變數 = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo) as! [AVCaptureDevice]
+for 裝置變數 in 相機裝置變數{
+    if 裝置變數.position == AVCaptureDevicePosition.Front{
+        前鏡頭變數 = 裝置變數
+    } 
+    else if 裝置變數.position == AVCaptureDevicePosition.Back{
+        後鏡頭變數 = 裝置變數
+    }
+}
+//一開始與設為後鏡頭
+目前相機變數 = 後鏡頭變數
+//錯誤處理
+var 錯誤變數：NSError?
+let 捕捉裝置變數 = AVCaptureDeviceInput(device：目前相機變數,error：&錯誤變數)
+if 錯誤變數 != nil{
+   println("error：\(錯誤變數?.localizedDescription)")
+}
+//設置影像輸出的session
+輸出影像變數 = AVCaptureStillImageOutput()
+輸出影像變數?.outputSettings = [AVVideoCodecKey：AVVideoCodecJPEG]
+//設置輸入與輸出的session
+相機變數.addInput(捕捉裝置變數)
+相機變數.addOutput(輸出影像變數)
+//設置預覽層
+預覽層變數 = AVCaptureVideoPreviewLayer(session：相機變數)
+view.layer.addSublayer(預覽層變數)
+預覽層變數?.videoGravity = AVLayerVideoGravityResizeAspectFill
+預覽層變數?.frame = view.layer.frame
+//將相機按鈕移到前面
+view.bringSubviewToFront(相機按鈕變數)
+相機變數.startRunning()
+//切換相機辨識器
+滑動辨識器變數.direction = .Up
+滑動辨識器變數.addTarget(self,action："toggleCamera")
+view.addGestureRecognizer(滑動辨識器變數)
+//辨識器放大
+放大辨識器變數.direction = .Right
+放大辨識器變數.addTarget(self,action："zoomIn")
+view.addGestureRecognizer(放大辨識器變數)
+//辨識器縮小
+縮小辨識器變數.direction = .Left
+縮小辨識器變數.addTarget(self,action："zoomOut")
+view.addGestureRecognizer(縮小辨識器變數)
+//滑動切換前後鏡頭
+func toggleCamera(){
+     相機變數.beginConfiguration()
+     var 錯誤變數：NSError?
+     //變更相機裝置        
+     let 新裝置變數 = (目前相機變數?.position == AVCaptureDevicePosition.Back)?前鏡頭變數：後鏡頭變數
+     //從session中移除所有輸入
+     for 輸入變數 in 相機變數.inputs{
+         相機變數.removeInput(輸入變數 as! AVCaptureDeviceInput)
+     }
+     //變更為新的輸入
+     let 相機輸入變數 = AVCaptureDeviceInput(device：新裝置變數,error：&錯誤變數)
+     if 相機變數.canAddInput(相機輸入變數){
+        相機變數.addInput(相機輸入變數)
+     }
+     目前相機變數 = 新裝置變數
+     相機變數.commitConfiguration()
+}
+//放大
+func zoomIn(){
+     if var 放大比例變數 = 目前相機變數?.videoZoomFactor{
+        if 放大比例變數 < 5.0{
+           let 新放大比例變數 = min(放大比例變數 + 1.0,5.0)
+           目前相機變數?.lockForConfiguration(nil)
+           目前相機變數?.rampToVideoZoomFactor(新放大比例變數,withRate：1.0)
+           目前相機變數?.unlockForConfiguration()
+        }
+     }
+}
+//縮小
+func zoomOut(){
+     if var 縮小比例變數 = 目前相機變數?.videoZoomFactor{
+        if 縮小比例變數 > 1.0{
+            let 新縮小比例變數 = max(縮小比例變數 - 1.0,1.0)
+            目前相機變數?.lockForConfiguration(nil)
+            目前相機變數?.rampToVideoZoomFactor(新縮小比例變數,withRate：1.0)
+            目前相機變數?.unlockForConfiguration()
+        }
+     }
+}
+//擷取照片
+@IBAction func capture(sender：AnyObject){
+   let 擷取變數 = 輸出影像變數?.connectionWithMediaType(AVMediaTypeVideo)
+   輸出影像變數?.captureStillImageAsynchronouslyFromConnection(擷取變數,completionHandler：{(imageDataSampleBuffer,error) -> Void in
+        let 照片變數 = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
+        self.影像變數 = UIImage(data：照片變數)
+        self.performSegueWithIdentifier("segue的identifier",sender：self)
+        })
+}
+override func prepareForSegue(segue：UIStoryboardSegue,sender：AnyObject?){
+    if segue.identifier == "segue的identifier"{
+       let 照片預覽變數 = segue.destinationViewController as! PhotoViewController
+       照片預覽變數.image = 影像變數
+    }
+}
+//儲存照片
+@IBAction func save(sender：AnyObject){
+   UIImageWriteToSavedPhotosAlbum(照片變數,nil,nil,nil)
+   dismissViewControllerAnimated(true,completion：nil)
+}
+
+AirDrop(實機) ： 
+//顯示AirDrop
+let 分享變數 = [fileURL]
+let 顯示變數 = UIActivityViewController(activityItems：分享變數,applicationActivities：nil)
+presentViewController(顯示變數,animated：true,completion：nil)
+//加入功能
+var 檔名變數 = ""
+@IBAction func share(sender：AnyObject){
+    if let 檔案路徑變數 = fileToURL(檔名變數){
+            let 檔案分享變數 = [檔案路徑變數]
+            let 檔案變數 = UIActivityViewController(activityItems：檔案分享變數, applicationActivities：nil)
+            let 檔案類型變數 = [UIActivityTypePostToFlickr,UIActivityTypePostToWeibo, UIActivityTypeMessage,UIActivityTypeMail,UIActivityTypePrint, UIActivityTypeCopyToPasteboard,UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll,UIActivityTypeAddToReadingList,UIActivityTypePostToFlickr, UIActivityTypePostToVimeo,UIActivityTypePostToTencentWeibo]
+            檔案變數.excludedActivityTypes = 檔案類型變數
+            presentViewController(檔案變數,animated：true,completion：nil)
+    }
+}
+//取得檔案路徑
+func fileToURL(file：String) -> NSURL?{
+     let 檔案名稱變數 = file.componentsSeparatedByString(".")
+     if let 檔案原路徑變數 = NSBundle.mainBundle().pathForResource(檔案名稱變數[0],ofType：檔案名稱變數[1]){
+            return NSURL(fileURLWithPath：檔案原路徑變數)
+     }
+     return nil
+}
+
+廣告 ： 
+加入framework ： 
+1.選專案名稱 -> General -> Linked Frameworks and Libraries -> + -> iAd.framework。
+2.選專案名稱 -> Build Phases -> Link Binary With Libraries -> + -> iAd.framework。
+import iAd
+橫幅廣告 ： canDisplayBannerAds = true
+插播廣告 ： 
+interstitialPresentationPolicy = .Manual UIViewController.prepareInterstitialAds()
+//30秒播放廣告
+var 時間變數 = NSTimer(fireDate：NSDate(timeIntervalSinceNow：30),interval：0,target：self, selector："displayInterstitialAds",userInfo：nil,repeats：false)
+NSRunLoop.currentRunLoop().addTimer(時間變數,forMode：NSRunLoopCommonModes)
+func displayInterstitialAds(){
+     if displayingBannerAd{
+        canDisplayBannerAds = false
+     }
+     let result = requestInterstitialAdPresentation()
+     canDisplayBannerAds = true
+}
+
+QR(Quick Response) Code掃描 ： 
+import AVFoundation
+實作(在class名稱：後面加入) ： AVCaptureMetadataOutputObjectsDelegate
+let qrcode變數 = [AVMetadataObjectTypeQRCode,AVMetadataObjectTypeCode128Code, AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeUPCECode,AVMetadataObjectTypePDF417Code, AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeAztecCode]
+var 捕捉變數：AVCaptureSession?
+var 影像預覽變數：AVCaptureVideoPreviewLayer?
+var 邊框變數：UIView?
+//取得AVCaptureDevice類別的實體來初始化一個device物件
+let 取得變數 = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+//取得AVCaptureDeviceInput類別的實體
+var 錯誤變數：NSError?
+let 取得輸入變數：AnyObject! = AVCaptureDeviceInput.deviceInputWithDevice(取得變數,error：&錯誤變數)
+if(錯誤變數 != nil){
+   println("\(error?.localizedDescription)")
+   return
+}
+//初始化captureSession物件
+捕捉變數 = AVCaptureSession()
+//capture session設定輸入裝置
+捕捉變數?.addInput(input as! AVCaptureInput)
+let 輸出變數 = AVCaptureMetadataOutput()
+捕捉變數?.addOutput(輸出變數)
+//使用調度佇列來回呼(call back)
+輸出變數.setMetadataObjectsDelegate(self,queue：dispatch_get_main_queue())
+輸出變數.metadataObjectTypes = qrcode變數
+//初始化影像預覽        
+影像預覽變數 = AVCaptureVideoPreviewLayer(session：捕捉變數)
+影像預覽變數?.videoGravity = AVLayerVideoGravityResizeAspectFill
+影像預覽變數?.frame = view.layer.bounds
+view.layer.addSublayer(影像預覽變數)
+//影像擷取
+捕捉變數?.startRunning()
+//初始化qrcode邊框
+邊框變數 = UIView()
+邊框變數?.layer.borderColor = UIColor.greenColor().CGColor
+邊框變數?.layer.borderWidth = 2
+view.addSubview(邊框變數!)
+view.bringSubviewToFront(邊框變數!)
+//qrcode解碼
+func captureOutput(captureOutput：AVCaptureOutput!,didOutputMetadataObjects metadataObjects：[AnyObject]!,fromConnection connection：AVCaptureConnection!){
+    //檢查是否為空值
+    if metadataObjects == nil || metadataObjects.count == 0{
+        邊框變數?.frame = CGRectZero
+        return
+    }
+    //取得metadata物件
+    let 取得內容變數 = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+    if 取得內容變數.type == AVMetadataObjectTypeQRCode{
+        //資料與qrcode原資料相同，更新狀態標籤文字並設定邊界
+        let 條碼變數 = 影像預覽變數?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
+        邊框變數?.frame = 條碼變數.bounds
+        if metadataObj.stringValue != nil{
+            println("\(metadataObj.stringValue)")
+            
+        }
+    }
+}
+
+
+地圖 ： 
+加入framework ： 選專案名稱 -> Capabilities -> ON -> MapKit.framework。
+import MapKit
+加入協定 ： MKMapViewDelegate
+@IBOutlet var 地圖變數：MKMapView!
+地圖變數.delegate = self
+//CLGeocoder ： 將地址轉成座標
+let 轉換變數 = CLGeocoder()
+轉換變數.geocodeAddressString("地址",completionHandler：{placemarks,error in
+    if error != nil{
+        println(error)
+        return
+    }
+    if placemarks != nil && placemarks.count > 0{
+       let 標記變數 = placemarks[0] as CLPlacemark
+       //MKPointAnnotation() ： 儲存標記資料
+       let 地標變數 = MKPointAnnotation()
+       地標變數.title = "標題"
+       地標變數.subtitle = "子標題"
+       //標記變數.location.coordinate ： 取得地址的地理座標
+       地標變數.coordinate = 標記變數.location.coordinate
+       //showAnnotations ： 使用者按下大頭針時顯示標記
+       self.地圖變數.showAnnotations([地標變數],animated：true)
+    }
+})
+
+
+導航 ： 
+//使用者授權使用定位服務
+let 授權定位變數 = CLLocationManager()
+授權定位變數.requestWhenInUseAuthorization()
+let 狀態變數 = CLLocationManager.authorizationStatus()
+if 狀態變數 == CLAuthorizationStatus.AuthorizedWhenInUse{
+    self.地圖變數.showsUserLocation = true
+}
+地圖變數.delegate = self
+var 地標變數：CLPlacemark?
+//轉換到使用者定位的地圖上
+let 導航變數 = CLGeocoder()
+導航變數.geocodeAddressString(restaurant.address,completionHandler：{placemarks,error in
+     if error != nil{
+        println(error)
+        return
+     }
+     if placemarks != nil && placemarks.count > 0{
+        let 目前地標變數 = placemarks[0] as! CLPlacemark
+        self.地標變數 = 目前地標變數
+        //加入大頭針
+        let 大頭針變數 = MKPointAnnotation()
+        大頭針變數.title = "肯德基"
+        大頭針變數.subtitle = "真好吃"
+        大頭針變數.coordinate = 目前地標變數.location.coordinate
+        self.地圖變數.showAnnotations([annotation],animated：false)
+        self.地圖變數.selectAnnotation(annotation,animated：true)
+     }            
+})
+var 目前路徑變數：MKRoute?
+//取得路徑資料
+@IBAction func showDirection(sender：AnyObject){
+     let 方向變數 = MKDirectionsRequest()
+     //設定路徑起始地與目的地
+     方向變數.setSource(MKMapItem.mapItemForCurrentLocation())
+     let 目的地變數 = MKPlacemark(placemark：地標變數)
+     方向變數.setDestination(MKMapItem(placemark：目的地變數))
+     方向變數.transportType = currentTransportType
+     //計算路徑
+     let 計算變數 = MKDirections(request：方向變數)
+     計算變數.calculateDirectionsWithCompletionHandler{(routeResponse,routeError) -> Void in
+      if routeError != nil{
+          println("Error：\(routeError.localizedDescription)")
+      } 
+      else{
+          let 路徑變數 = routeResponse.routes[0] as! MKRoute
+          self.目前路徑變數 = 路徑變數
+          self.地圖變數.removeOverlays(self.地圖變數.overlays)
+          self.地圖變數.addOverlay(路徑變數.polyline,level：MKOverlayLevel.AboveRoads)
+          //自動縮放地圖
+          let 縮放變數 = 路徑變數.polyline.boundingMapRect
+          self.地圖變數.setRegion(MKCoordinateRegionForMapRect(縮放變數),animated：true)
+      }}
+}
+//附近周圍地點
+@IBAction func showNearby(sender：AnyObject){
+    let 搜尋變數 = MKLocalSearchRequest()
+    搜尋變數.naturalLanguageQuery = 一群地點(類別)變數.category
+    搜尋變數.region = 地圖變數.region    
+    let 區域搜尋 = MKLocalSearch(request：搜尋變數)
+    區域搜尋.startWithCompletionHandler{(response,error) -> Void in
+    if error != nil{ ： 
+       println("Error：\(error.localizedDescription)")
+       return
+    }
+    let 附近地點變數 = response.mapItems as! [MKMapItem]
+    var 附近地點大頭針變數：[MKAnnotation] = []
+    if 附近地點變數.count > 0{
+       for 搜尋附近地點變數 in 附近地點變數{
+       //加入大頭針
+       let 大頭針變數 = MKPointAnnotation()
+       大頭針變數.title = "肯德基"
+       大頭針變數.subtitle = "真好吃"
+       大頭針變數.coordinate = 搜尋附近地點變數.placemark.location.coordinate
+       附近地點大頭針變數.append(大頭針變數)
+       }
+    }
+    self.地圖變數.showAnnotations(附近地點大頭針變數,animated：true)
+    }
+}
+
+
+
+3D Touch ：
+
+//檢查是否取得3D touch服務
+
+if traitCollection.forceTouchCapability == UIForceTouchCapability.Available{
+   
+   let AppbundleId變數 = NSBundle.mainBundle().bundleIdentifier
+   
+   let QuickAction變數 = UIApplicationShortcutItem(type: "\(AppbundleId變數.識別碼)", localizedTitle: "使用者看到的名稱", localizedSubtitle: "子標題" , icon: UIApplicationShortcutIcon(templateImageName: "圖示名稱"), userInfo: "傳遞的資訊")
+   
+//加入Quick 
+   Action
+UIApplication.sharedApplication().shortcutItems = [QuickAction變數]
+
+在AppDelegate中加入 ：
+
+enum QuickAction: String{
+   
+  case 識別碼變數 = "識別碼"        
+   
+  init?(全識別碼變數:String){
+   
+     guard let 短識別碼變數 = 
+全識別碼變數.componentsSeparatedByString(".").last else{
+
+        return nil
+        
+     }
+   
+     self.init(rawValue:短識別碼變數)
+   
+     }
+
+}
+
+
+func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void){
+        
+    completionHandler(handleQuickAction(QuickAction變數))
+
+}
+
+private func handleQuickAction(QuickAction變數:UIApplicationShortcutItem) -> Bool{
+        
+    let shortcutType = QuickAction變數.type
+        
+    guard let QuickAction識別碼變數 = QuickAction(全識別碼變數:shortcutType) else{
+            
+       return false
+        
+    }
+        
+    switch QuickAction識別碼變數{
+        
+       case .識別碼 :
+
+       //按下後執行的程式
+        
+    }
+        
+    return true
+
+}
+
+
+App國際化(在各國顯示不同語言) ： 
+選專案名稱 -> Editor -> Export For Location… -> Save，可以在儲存的檔案路徑中找到.xliff檔(翻譯的文檔)。
+
+載入翻譯檔 ： Editor -> Import Locations… -> Import。
+
+App版本檢查 ： 
+
+  if #available(iOS 版本, *){
+     
+//符合IOS版本可以執行
+
+  }
+  
+else{
+     
+//早期的版本
+
+  }
+
+Android ： 
+官方教學 ： http：//developer.android.com/index.html
+專案 ： 
+src ： 放程式碼(.java檔)，繼承Activity為主程式，要import android.app.Activity;。
+gen ： 由編譯器產生不可以更改。
+res ： 儲存各種檔案資源，包括程式介面(layout)與圖檔(drawable)，xml檔產生gen/R.java的檔案。
+bin ： 上傳程式的apk檔。
+asset ： 儲存其他的檔案資源，要使用時必須指定路徑。
+取得程式執行的畫面 ： 用DDMS。
+AndroidMainifest.xml ： 程式的組態檔(ex ： 設定簡訊)，<uses-sdk>為記錄Android SDK使用的版本，<android：icon>為App的小圖示，<android：label>為App小圖示下面的名稱。
+@string/ ： 在res/values/strings.xml的資料夾中。
+編譯過程 ： xml檔(介面) -> R.java檔(由xml檔(介面)產生) -> xx.java檔。
+自動產生get與set的方法 ： Refactor -> Encapsulate Field…。
+自動產生建構子 ： Source -> Gnenerator Constractor using Fields…。
+
+偵錯 ： 
+import android.util.Log;
+Log.d("Logtag名稱","自定名稱");
+在LogCat視窗按+號 ： 
+Fiter Name輸入專案的資料夾名稱，by Log Tag中輸入Logtag名稱，by Log Message輸入d，可以看到印出的訊息，沒印出訊息表示前面的程式碼有錯。 
+
+xml檔(在layout資料夾中)[大小 ： pt] ： 
+第一行(一定要加) ： <?xml version="1.0" encoding="utf-8"?>
+Linearlayout(建議使用) ： 只留android：layout_width與android：layout_height。
+設定比例 ： layout_weight = "數字"。
+依照物件的大小填滿 ： wrap_content。
+填滿整個螢幕 ： match_parent。
+填滿整個螢幕(低版本) ： fill_parent。
+
+取得螢幕的高度與寬度 ： 
+DisplayMetrics 取得變數 = new DisplayMetrics();
+getWindowManager().getDefaultDisplay().getMetrics(取得變數);
+int 寬度變數 = 取得變數.widthPixels;
+int 高度變數 = 取得變數.heightPixels;
+
+介面 ： 
+1.輸入(inputType) ： 
+  文字 ： android：inputType = "text"
+  時間 ： android：inputType = "time"
+  日期 ： android：inputType = "date"
+  數字 ： android：inputType = "number"
+2.元件距離 ： 
+  padding ： 元件內部文字與元件邊框的距離。
+  layout_margin ： 元件與外框的距離。
+3.圓鈕單一選項群組(RadioGroup) ： 
+  private RadioGroup 圓鈕群組變數;
+  圓鈕群組變數 = (RadioGroup)findViewById(R.id.[在xml檔中RadioGroup元件加入android：id="@+id/名稱"的名稱]); //要寫在onCreate的方法中
+  取值 ： 
+  圓鈕群組變數.getCheckedRadioButtonId() == R.id.在xml檔中RadioButton元件加入的android：id="@+id/名稱"的名稱
+4.多選項(CheckBox) ： 
+  private CheckBox 多選項變數;
+  多選項變數 = (CheckBox)findViewById(R.id.在xml檔中RadioGroup元件加入android：id="@+id/名稱"的名稱]);
+  判斷被選中 ： if(多選項變數.isChecked()){…}
+
+主程式.java ： 
+從程式中取得到xml檔的介面元件 ： 元件型態 取得元件變數 = (元件型態)findViewById(R.id.[在xml檔中加入android：id="@+id/名稱"的名稱]);
+取得使用者輸入的數值 ： String 取得變數 = 第一個字大寫的型態.parse第一個字大寫的型態(取得取的元件變數.getText().toString());
+
+Activity ： 
+狀態 ： 
+活化(Active) ： 啟動後處於作用中狀態。
+暫停(Pause) ： 當螢幕被暫停時，ex ： 打電話。
+停止(Stop) ： 離開螢幕狀態。
+結束(Destroy) ： 程式終止狀態。
+產生程式碼 ： Source -> Override/Implement Methods…
+程式執行流程 ： onCreate -> onStart -> onResume -> OnPause -> onStop -> onRestart(中斷事件時，回到onStart繼續執行)、onDestroy。
+
+畫面切換 ： 
+新增第二個畫面 ： 在layout資料夾 -> new -> Android XML file -> xml檔名。
+新增Activity ： src -> new -> class -> 新java檔名，程式碼中要extends Activity  -> 在onCreate的方法中加入setContentView(R.layout.xml檔名);。 
+開啟AndroidManifest.xml檔加入 ： 
+<activity android：name="新java檔名"></activity>
+程式碼 ： 
+Intent 管理員變數 = new Intent(原來java檔檔名.this,新java檔名.class);
+startActivity(管理員變數);
+
+傳資料到下一個畫面 ： 
+原來java檔 ： 
+Bundle 包裹變數 = new Bundle();
+//putString() ： 包成包裹
+包裹變數.putString("key值","要傳的資料");
+Intent 管理員變數 = new Intent(原來java檔檔名.this,新java檔名.class);
+//putExtras ： 把包裹送給管理員
+管理員變數.putExtras(包裹變數);
+startActivity(管理員變數);
+新的java檔 ： 
+Intent 管理員變數 = getIntent();
+//getExtras ： 解開包裹
+Bundle 包裹變數 = intent.getExtras();
+String 取得資料變數 = 包裹變數.getString("key值");
+
+接收下一個畫面回傳的資料 ： 
+新的java檔 ： 
+Bundle 包裹變數 = new Bundle();
+//putString() ： 包成包裹
+包裹變數.put要傳送的包裹型態("key值",要傳的資料);
+Intent 管理員變數 = new Intent();
+管理員變數.putExtras(包裹變數);
+//setResult在主程式中要加入protected void onActivityResult()，第二個參數為包裹的結果值
+setResult(包裹的結果值,管理員變數);
+//finish() ： 畫面結束
+finish();
+原來java檔 ： 
+Intent 管理員變數 = new Intent(原來java檔檔名.this,新java檔名.class);
+startActivityForResult(管理員變數,識別碼);
+實作onActivityResult的方法 ： 
+protected void onActivityResult(int requestCode,int resultCode,Intent data){
+    //requestCode ： 識別碼、resultCode ： 包裹的結果值、data ： 接收的資料 
+    super.onActivityResult(requestCode,resultCode,data);
+    if(requestCode == 識別碼){
+	if(data == null){
+          //沒有設定管理員
+        }else if(data.getExtras() == null){
+	  //沒有設定包裹
+	}
+	String 取得資料 = data.getExtras().getString("key值");
+    }
+}
+
+按鈕事件 ： 
+第一種 ： 
+第一步 ： 
+import android.view.View.OnClickListener; 
+實作OnClickListener ： extends Activity後面加implements OnClickListener
+第二步 ： 
+Button 按鈕變數 = (Button)findViewById(R.id.[在xml檔中加入android：id="@+id/名稱"的名稱]);
+按鈕變數.setOnClickListener(this);
+第三步 ： 實作按鈕按下的方法。
+public void onClick(View v){
+  //判斷按下哪個按鈕
+  switch(v.getId()){
+    case R.id.在xml檔中加入android：id="@+id/名稱"的名稱 ： 
+    …
+    break;
+  } 
+}
+第二種 ： 
+Button 按鈕變數 = (Button)findViewById(R.id.[在xml檔中加入android：id="@+id/名稱"的名稱]);
+按鈕變數.setOnClickListener(按鈕被按變數);
+實作按鈕按下的方法 ： 
+OnClickListener 按鈕被按變數 = new OnClickListener(){
+     public void onClick(View v){
+     //按鈕被按時
+     …}
+};
+
+用列表資呈現資料 ： 
+要extends ListActivity。
+String[] 資料變數 = {"資料1","資料2",…};
+//android.R.layout.simple_list_item_1 ： 一行文字、android.R.layout.simple_list_item_2 ： 一行文字大，一行文字小、android.R.layout.simple_list_item_checked ： 勾選項目的列表、android.R.layout.simple_list_item_single_choice ： 單選列表、android.R.layout.simple_list_item_multiple_choice ： 多選列表
+ListAdapter 列表變數 = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,資料變數);
+setListAdapter(列表變數);
+
+使用者按哪一個列表選項的方法 ： 
+protected void onListItemClick(ListView l,View v,int position,long id){
+  //ListView ： 列表、View ： 列表上每一列資料、position ： 使用者按下的位置、id ： 傳的列表為表格資料
+  //super.onListItemClick ： 使用者按下列表上的資料
+  super.onListItemClick(l,v,position,id);
+  //用position找到使用者按下的位置	
+}
+
+顯示訊息 ： 
+Builder 訊息變數 = new AlertDialog.Builder(java檔名.this);
+訊息變數.setTitle("標題文字");
+訊息變數.setMessage("訊息文字");
+//setPositiveButton ： 顯示按鈕，第二個參數為按鈕按下要呼叫的方法，設null為回原畫面
+訊息變數.setPositiveButton("按鈕上的文字",訊息按鈕按下的方法);
+Dialog 顯示訊息變數 = 訊息變數.create();
+顯示訊息變數.show();
+
+顯示列表訊息 ： 
+陣列形態 []列表陣列變數 = {元素1,元素2,…};
+Builder 訊息變數 = new AlertDialog.Builder(java檔名.this);
+訊息變數.setTitle("標題文字");
+訊息變數.setItems(列表陣列變數,訊息按鈕按下的方法);
+Dialog 顯示訊息變數 = 訊息變數.create();
+顯示訊息變數.show();
+
+訊息按鈕按下的方法 ： 
+import android.content.DialogInterface;
+DialogInterface.OnClickListener 訊息按鈕按下的方法 = new DialogInterface.OnClickListener(){
+    public void onClick(DialogInterface dialog,int i){
+    //用列表陣列變數[i]找到列表訊息按下的位置
+    …}
+};
+
+日期 ： 
+OnClickListener 按鈕按下的方法 = new OnClickListener(){
+          public void onClick(View v){
+          //Calendar.getInstance() ： 取得系統時間
+	  Calendar 日期變數 = Calendar.getInstance();
+	  Dialog 日期訊息變數 = new DatePickerDialog(java檔.this,選擇日期方法,日期變數.get(Calendar.YEAR),日期變數.get(Calendar.MONTH),日期變數.get(Calendar.DATE));
+          日期訊息變數.show();
+	  }
+};
+得到使用者選擇的日期 ： 
+DatePickerDialog.OnDateSetListener 選擇日期方法 = new DatePickerDialog.OnDateSetListener(){
+    public void onDateSet(DatePicker view,int year,int monthOfYear,int dayOfMonth){
+           //monthOfYear ： 回傳是0
+	   顯示元件變數.setText("你選擇的日期是："+String.valueOf(year)+"/"+String.valueOf(monthOfYear+1)+"/"+String.valueOf(date));	
+    }
+};
+
+讀取資料的進度 ： 
+ProgressDialog 讀取進度變數 = new ProgressDialog(原來java檔.this);
+//setMax ： 最大進度值，通常是100
+讀取進度變數.setMax(100);
+讀取進度變數.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+讀取進度變數.setTitle("標題文字");
+//ncrementProgressBy ： 一開始的進度
+讀取進度變數.incrementProgressBy(30);
+讀取進度變數.show();
+
+快顯訊息 ： Toast.makeText(this,"訊息文字",Toast.LENGTH_SHORT).show();
+下滑式訊息 ： 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+//System.currentTimeMillis() ： 要發送的訊息
+Notification 訊息變數 = new Notification(android.R.drawable.stat_notify_chat,"訊息文字 ",System.currentTimeMillis());
+PendingIntent 管理員變數 = PendingIntent.getActivity(原來java檔.this,識別碼(自定),new Intent(原來java檔.this,新java檔.class),PendingIntent.FLAG_UPDATE_CURRENT);
+notification.setLatestEventInfo(原來java檔.this,"訊息標題","訊息文字",管理員變數);
+NotificationManager 發送變數 = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+//notify ： 發送訊息
+發送變數.notify(識別碼,notification);
+
+右上角選單 ： 
+public boolean onCreateOptionsMenu(Menu menu){
+       //menu.add ： 增加選單項目
+        menu.add(群組數字,判斷選項數字,排序數字,"選單文字");
+        //onCreateOptionsMenu ： 使用者按下menu按鍵執行的方法 
+	return super.onCreateOptionsMenu(menu);
+}
+//onOptionsItemSelected ： 選單項目被按時執行的方法
+public boolean onOptionsItemSelected(MenuItem item){
+	if(item.getGroupId() == 群組數字){…}
+        if(item.getItemId() == 判斷選項數字){…}
+        if(item.getOrder()) == 排序數字){…}
+	return super.onOptionsItemSelected(item);
+}
+
+網頁(WebView) ： 
+介面檔 ： 
+<WebView
+        android：id = "@+id/網頁id"
+        android：layout_width="match_parent"
+        android：layout_height="match_parent"/>
+AndroidManifest.xml檔中加入 ： 
+<uses-permission android：name="android.permission.INTERNET"/>
+程式碼檔 ： 
+import android.webkit.*;
+//要寫在onCreate的方法中
+WebView 網頁變數 = (WebView)findViewById(R.id.網頁id);
+//設定轉址的網頁為原瀏覽器開啟，不用外部的瀏覽器
+網頁變數.setWebViewClient(new WebViewClient());
+WebSettings 網頁控制變數 = 網頁變數.getSettings();
+網頁控制變數.setJavaScriptEnabled(true);
+網頁變數.loadUrl("網址");
+
+資料儲存 ： 
+第一種(SharedPreference) ： 
+import android.content.SharedPreferences;
+//儲存資料，MODE_PRIVATE(0) ： 只有這個app可以使用，MODE_WORLD_WRITEABLE(1) ： 其他app可以使用。
+SharedPreferences 儲存變數 = getSharedPreferences(包裹值(自定),MODE_PRIVATE);
+//commit() ： 儲存資料
+儲存變數.edit().put要儲存資料的型態[第一字大寫]("key值",儲存元件變數.getText().toString()).commit();
+//讀取資料
+SharedPreferences 儲存變數 = getSharedPreferences(包裹值,MODE_PRIVATE);
+String 讀取變數 = 儲存變數.get要儲存資料的型態[第一字大寫]("key值","讀到空資料時顯示的文字");
+第二種(存入檔案中) ： 
+//OutputStream ： 寫入檔案
+try{
+OutputStream 寫入變數 = openFileOutput("檔名.副檔名",Activity.MODE_PRIVATE);
+String 文字變數 = "文字";
+//用utf-8編碼寫入
+寫入變數.write(文字變數.getBytes("utf-8"));
+寫入變數.close();
+}catch(FileNotFoundException e){e.printStackTrace();
+}catch(UnsupportedEncodingException e){e.printStackTrace();
+}catch(IOException e){e.printStackTrace();
+} 
+//InputStream ： 讀取檔案
+try{
+    InputStream 讀取變數 = openFileInput("檔名.副檔名");
+    byte[] 串流大小變數 = new byte[串流大小];
+    int 資料結尾變數 = 讀取變數.read(串流變數);
+    //用utf-8編碼讀取
+    String 資料變數 = new String(串流大小變數,0,資料結尾變數,"utf-8");
+    //close() ： 關閉檔案
+    讀取變數.close();
+}catch(FileNotFoundException e){e.printStackTrace();
+}catch(IOException e){.printStackTrace();
+}
+第三種(SQLite) ： 
+import android.content.Context;
+import android.database.sqlite.*;
+類別要extends SQLiteOpenHelper
+public CDbManager(Context context){
+    super(context,"資料庫名稱.db",null,資料庫版本);
+}
+public void onCreate(SQLiteDatabase db){
+    String sql指令變數 = 	"sql指令";
+    //db.execSQL ： 執行sql指令，建立primary key(primary key一定要用_id) ： _id primarykey型態 PRIMARY KEY
+    db.execSQL(sql指令變數);	
+}
+//資料庫版本不同時執行onUpgrade方法。
+public void onUpgrade(SQLiteDatabase db,int oldVersion,int newVersion){
+   //DROP TABLE IF EXISTS config ： 刪除舊有的資料表
+   db.execSQL("DROP TABLE IF EXISTS config");	
+   onCreate(db);
+}
+//getWritableDatabase() ： 寫入資料庫
+ContentValues 資料變數 = new ContentValues();
+資料變數.put("欄位名稱",要寫入的資料);
+新增資料 ： 
+getWritableDatabase().insert("資料表名稱",null,資料變數);
+刪除資料 ： 
+getWritableDatabase().delete("資料表名稱","_id="+String.valueOf(primarykey變數),null);
+更新資料 ： 
+getWritableDatabase().update("資料表名稱",資料變數,"_id="+String.valueOf(primarykey變數),null);
+查詢資料 ： 
+//getReadableDatabase() ： 從資料庫中取資料
+public Cursor GetBySql(String sql){
+    return getReadableDatabase().rawQuery(sql,null);
+}
+
+互傳訊息 ： 
+Socket ： 乙太網卡(IP與Port)，把相同的IP位置連結，要指定通訊埠(Port)就可以用網路相互傳資料。
+客戶端(Client) ： 傳送資料的東西。
+try{
+   //開啟客戶端連接port
+   Socket 客戶端變數 = new Socket("IP位置",port位置);
+   //DataOutputStream ： 送資料到Server，getOutputStream() ： 送資料
+   DataOutputStream 寫資料變數 = new DataOutputStream(客戶端變數.getOutputStream());
+   streamOut.writeUTF(要送的文字);
+   客戶端變數.close();
+}catch(UnknownHostException e){
+    e.printStackTrace();
+}catch(IOException e){
+    e.printStackTrace();
+}
+主機端(Server) ： 接收傳輸資料的東西。
+try{
+    //開啟主機端建立port
+    ServerSocket 主機端變數 = new ServerSocket(port位置[自定]);
+    System.out.println("Server已啟動。IP位置："+ Inet4Address.getLocalHost().getHostAddress());
+    while(true){
+        //連線client ： 主機端變數.accept()
+        Socket 客戶端變數 = 主機端變數.accept();
+        System.out.println("客戶端已經連線");
+        //DataInputStream ： 從Client端讀資料，getInputStream() ： 取得資料
+        DataInputStream 讀資料變數 = new DataInputStream(客戶端變數.getInputStream());
+        //streamIn.readUTF() ： 讀取的資料
+        System.out.println("讀取資料：" + streamIn.readUTF());
+        //close() ： 關閉連線
+        客戶端變數.close();
+    }
+}catch(IOException e){
+    e.printStackTrace();
+}
+
+取得網頁資料 ： 
+在設定檔(AndroidManifest.xml)中加入 ： 
+<uses-permission android：name="android.permission.INTERNET"/>
+import java.io.*;
+import java.net.*;
+import android.widget.*;
+import android.graphics.*;
+import org.apache.http.util.*;
+StrictMode.ThreadPolicy 取得變數 = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+StrictMode.setThreadPolicy(取得變數);
+try{
+    URL 網址變數 = new URL("網址");
+    URLConnection 連線變數 = 網址變數.openConnection();
+    InputStream 讀取變數 = 連線變數.getInputStream();
+    //取得文字
+    BufferedInputStream 讀取字元變數 = new BufferedInputStream(讀取變數);
+    //available() ： 讀取資料
+    ByteArrayBuffer 儲存變數 = new ByteArrayBuffer(讀取字元變數.available());
+    int 陣列初始位置變數 = 0;
+    while((陣列初始位置變數 = 讀取字元變數.read()) != -1){
+	儲存變數.append((byte)陣列初始位置變數);
+    }
+    String 顯示網頁內容變數 = EncodingUtils.getString(儲存變數.toByteArray(),"utf8");
+    //取得圖片
+    Bitmap 圖片變數 = BitmapFactory.decodeStream(讀取變數);
+    ImageView 圖檔儲存變數 = (ImageView)findViewById(R.id.ImageView的id);
+    //setImageBitmap ： 顯示圖片
+    圖檔儲存變數.setImageBitmap(圖片變數);
+}catch(MalformedURLException e){
+    e.printStackTrace();
+}catch(IOException e){
+    e.printStackTrace();
+}catch(Exception e){
+    e.printStackTrace();
+}
+int 取得到符合內容的位置變數 = 顯示網頁內容變數.indexOf("取網頁中符合的文字");
+//起始位置要從取網頁中符合的文字開始算，結束位置是要截取到哪一個位置
+String 取得到的內容變數 = 顯示網頁內容變數.substring(取得到符合內容的位置變數+起始位置,取得到符合內容的位置變數+結束位置);
+
+播放音樂 ： 
+在res資料夾下面建立raw資料夾，檔案放在raw資料夾裡。
+import android.media.*;
+MediaPlayer 檔案變數 = MediaPlayer.create(this,R.raw.檔名);
+檔案在SD卡中 ： MediaPlayer 檔案變數 = new MediaPlayer();
+檔案變數.setDataSource("/sdcard/檔名.副檔名");
+//play() ： 播放
+檔案變數.play();
+//stop() ： 停止播放
+檔案變數.stop();
+//pause() ： 暫停播放
+檔案變數.pause();
+//release() ： 釋放資源
+檔案變數.release();
+判斷是否播放中 ： 
+if(檔案變數.isPlaying()){…}
+
+錄音 ： 
+在設定檔(AndroidManifest.xml)中加入 ： 
+<uses-permission android：name="android.persmission.RECORD_AUDIO"/>
+MediaRecorder 檔案變數 = new MediaRecorder();
+//設定音源
+檔案變數.setAudioSource(MediaRecorder.AudioSource.MIC);
+//設定輸出檔案的格式
+檔案變數.setOutputFormat(MediaRecorder.OutputFormat.RAW_AMR);
+//設定編碼格式
+檔案變數.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+//設定錄音檔位置
+檔案變數.setOutputFile(recodeFile.getAbsolutePath());
+
+播放影片 ： 
+import android.widget.*;
+VideoView 檔案變數 = (VideoView)findViewById(R.id.VideoView的id);
+MediaController 控制變數 = new MediaController(this);
+檔案變數.setMediaController(控制變數);
+檔案變數.setVideoURI(Uri.parse("android.resource：//com.example.專案名稱/"+ R.raw.檔名));
+檔案在SD卡中 ： setVideoURI(Uri.parse("file：///sdcard/video/檔名.副檔名"));
+//play() ： 播放
+檔案變數.play();
+//stop() ： 停止播放
+檔案變數.stop();
+//pause() ： 暫停播放
+檔案變數.pause();
+//release() ： 釋放資源
+檔案變數.release();
+判斷是否播放中 ： 
+if(檔案變數.isPlaying()){…}
